@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voyage 2022 — TeaForThree</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .trip-body-grid{display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:start}
+    .prose p{font-size:15px;line-height:1.8;color:var(--text-mid);margin-bottom:1.2rem}
+    .day-list{display:flex;flex-direction:column}
+    .day-item{padding:9px 0;border-bottom:0.5px solid var(--border)}
+    .day-item:last-child{border-bottom:none}
+    .day-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+    .day-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;margin-bottom:2px}
+    .day-desc{font-size:12.5px;color:var(--text-light);line-height:1.5}
+    .sidebar-card{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.4rem;margin-bottom:14px}
+    .sidebar-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:0.5px solid var(--border)}
+    .info-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:0.5px solid var(--border);font-size:13px}
+    .info-row:last-child{border-bottom:none}
+    .info-key{color:var(--text-light)}
+    .spot-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+    .spot-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-mid);line-height:1.45}
+    .spot-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px}
+    .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:1.5rem}
+    .photo-placeholder{border-radius:var(--radius-sm);height:100px;display:flex;align-items:center;justify-content:center;border:0.5px dashed var(--border-strong);background:var(--cream-dark)}
+    .photo-placeholder span{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light)}
+    .nav-trips{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:0.5px solid var(--border)}
+    .nav-trip-link{text-decoration:none;color:inherit}
+    .nav-trip-dir{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px}
+    .nav-trip-name{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold)}
+    @media(max-width:700px){.trip-body-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Tea<span>For</span>Three</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="voyages.html" class="active">Nos voyages</a></li>
+    <li><a href="incontournables.html">Incontournables</a></li>
+    <li><a href="carnet.html">Carnet de route</a></li>
+    <li><a href="avenir.html">À venir</a></li>
+  </ul>
+  <span class="nav-tea">London, every year</span>
+</nav>
+
+<div class="hero" style="min-height:320px;background:linear-gradient(145deg,#0e2010 0%,#286030 55%,#5aa050 100%)">
+  <div class="hero-pattern"></div>
+  <div class="hero-filigrane">2022</div>
+  <div class="hero-content">
+    <div class="hero-tag">Été · Voyage n°3</div>
+    <h1>Londres <em>2022</em></h1>
+    <div class="divider"></div>
+    <p class="hero-sub">Greenwich, Camden &amp; les musées royaux</p>
+  </div>
+</div>
+
+<div class="page">
+  <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:2rem;margin-bottom:2rem">
+    <span class="badge gold">Été 2022</span>
+    <span class="badge">4 jours · 3 nuits</span>
+    <span class="badge">South-East &amp; North</span>
+    <a href="voyages.html" style="margin-left:auto;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none">← Tous les voyages</a>
+  </div>
+
+  <div class="trip-body-grid">
+    <div>
+      <div class="prose">
+        <p>L'été londonien est une parenthèse dorée. Ce troisième voyage avait la saveur de la découverte — nous avions décidé de sortir du centre pour explorer deux quartiers très différents : Greenwich au sud-est, avec son patrimoine maritime et son méridien zéro, et Camden au nord, avec son énergie punk et ses marchés déjantés.</p>
+        <p>Greenwich nous a complètement conquis. Se tenir sur le méridien zéro, visiter le Royal Observatory, et découvrir la vue depuis la colline sur les Docklands et Canary Wharf — c'était une journée mémorable, loin de l'agitation du centre.</p>
+        <h3>Le moment inoubliable</h3>
+        <p>Camden Market un samedi après-midi. L'énergie, les couleurs, les musiques qui se mélangent, les cuisines du monde entier. C'est bruyant, festif, complètement décalé — et on a adoré chaque minute.</p>
+      </div>
+
+      <h3 style="font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin:2rem 0 1rem;color:var(--text-dark)">Le programme jour par jour</h3>
+      <div class="day-list">
+        <div class="day-item fade-up"><div class="day-label">Jour 1</div><div class="day-title">Arrivée &amp; London Bridge</div><div class="day-desc">Eurostar, installation. Soirée sur le South Bank, Tower Bridge au coucher du soleil.</div></div>
+        <div class="day-item fade-up"><div class="day-label">Jour 2</div><div class="day-title">Greenwich</div><div class="day-desc">DLR jusqu'à Greenwich, Royal Observatory, Meridian Line, balade dans le parc, Cutty Sark. Déjeuner avec vue sur la Tamise.</div></div>
+        <div class="day-item fade-up"><div class="day-label">Jour 3</div><div class="day-title">Camden &amp; British Museum</div><div class="day-desc">Camden Market l'après-midi, British Museum en soirée (nocturne le vendredi). Dîner à Bloomsbury.</div></div>
+        <div class="day-item fade-up"><div class="day-label">Jour 4</div><div class="day-title">Retour</div><div class="day-desc">Matinée libre à Covent Garden, Eurostar de 14h.</div></div>
+      </div>
+
+      <div class="photo-grid" style="margin-top:1.5rem">
+        <div class="photo-placeholder"><span>Photo 1</span></div>
+        <div class="photo-placeholder"><span>Photo 2</span></div>
+        <div class="photo-placeholder"><span>Photo 3</span></div>
+        <div class="photo-placeholder"><span>Photo 4</span></div>
+        <div class="photo-placeholder"><span>Photo 5</span></div>
+        <div class="photo-placeholder"><span>Photo 6</span></div>
+      </div>
+
+      <div class="nav-trips">
+        <a href="voyage-2021.html" class="nav-trip-link"><div class="nav-trip-dir">← Voyage précédent</div><div class="nav-trip-name">Londres 2021</div></a>
+        <a href="voyage-2023.html" class="nav-trip-link" style="text-align:right"><div class="nav-trip-dir">Voyage suivant →</div><div class="nav-trip-name">Londres 2023</div></a>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-card">
+        <div class="sidebar-title">Infos pratiques</div>
+        <div class="info-row"><span class="info-key">Dates</span><span>Juillet 2022</span></div>
+        <div class="info-row"><span class="info-key">Durée</span><span>4 jours · 3 nuits</span></div>
+        <div class="info-row"><span class="info-key">Saison</span><span>Été</span></div>
+        <div class="info-row"><span class="info-key">Transport</span><span>Eurostar + DLR</span></div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-title">Coups de cœur</div>
+        <ul class="spot-list">
+          <li><span class="spot-dot"></span>Royal Observatory de Greenwich</li>
+          <li><span class="spot-dot"></span>La vue depuis Greenwich Park</li>
+          <li><span class="spot-dot"></span>Camden Market le samedi</li>
+          <li><span class="spot-dot"></span>British Museum — la Grande Cour</li>
+          <li><span class="spot-dot"></span>Tower Bridge au coucher du soleil</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Tea<span>For</span>Three</div>
+    <div class="footer-tagline">Trois voyageurs, une ville, une tradition</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="voyages.html">Voyages</a></li>
+      <li><a href="incontournables.html">Incontournables</a></li>
+      <li><a href="carnet.html">Carnet</a></li>
+      <li><a href="avenir.html">À venir</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

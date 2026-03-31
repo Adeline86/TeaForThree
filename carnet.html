@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carnet de route — TeaForThree</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .carnet-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    .carnet-card{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .carnet-card-header{padding:1.1rem 1.4rem;border-bottom:0.5px solid var(--border);display:flex;align-items:center;gap:10px}
+    .carnet-icon{font-size:18px;line-height:1}
+    .carnet-card-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:400}
+    .carnet-card-body{padding:1rem 1.4rem}
+
+    .tip-item{padding:9px 0;border-bottom:0.5px solid var(--border)}
+    .tip-item:last-child{border-bottom:none}
+    .tip-title{font-size:13px;font-weight:400;color:var(--text-dark);margin-bottom:2px}
+    .tip-desc{font-size:12.5px;color:var(--text-light);line-height:1.5}
+    .tip-tag{display:inline-block;font-size:10px;letter-spacing:0.06em;padding:2px 7px;border-radius:20px;margin-bottom:4px}
+    .tip-tag.good{background:rgba(90,160,80,0.12);border:0.5px solid rgba(90,160,80,0.3);color:#286030}
+    .tip-tag.warn{background:rgba(181,118,58,0.12);border:0.5px solid rgba(181,118,58,0.3);color:var(--brown-mid)}
+    .tip-tag.info{background:rgba(58,138,170,0.1);border:0.5px solid rgba(58,138,170,0.25);color:#1a5570}
+
+    .budget-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:0.5px solid var(--border);font-size:13px}
+    .budget-row:last-child{border-bottom:none}
+    .budget-cat{color:var(--text-mid)}
+    .budget-val{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:var(--text-dark)}
+    .budget-note{font-size:11px;color:var(--text-light)}
+
+    .transport-step{display:flex;gap:12px;padding:10px 0;border-bottom:0.5px solid var(--border)}
+    .transport-step:last-child{border-bottom:none}
+    .transport-num{width:24px;height:24px;border-radius:50%;background:var(--gold-pale);border:0.5px solid var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--brown-mid);flex-shrink:0;margin-top:2px}
+    .transport-title{font-size:13px;font-weight:400;color:var(--text-dark);margin-bottom:2px}
+    .transport-desc{font-size:12px;color:var(--text-light);line-height:1.45}
+
+    .weather-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .weather-season{text-align:center;padding:12px 8px;border-radius:var(--radius-sm);background:var(--cream-dark);border:0.5px solid var(--border)}
+    .ws-name{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+    .ws-temp{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--text-dark);margin-bottom:3px}
+    .ws-desc{font-size:11px;color:var(--text-light)}
+
+    .full-width{grid-column:1 / -1}
+
+    @media(max-width:700px){
+      .carnet-grid{grid-template-columns:1fr}
+      .weather-grid{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Tea<span>For</span>Three</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="voyages.html">Nos voyages</a></li>
+    <li><a href="incontournables.html">Incontournables</a></li>
+    <li><a href="carnet.html" class="active">Carnet de route</a></li>
+    <li><a href="avenir.html">À venir</a></li>
+  </ul>
+  <span class="nav-tea">London, every year</span>
+</nav>
+
+<div class="hero" style="min-height:280px">
+  <div class="hero-pattern"></div>
+  <div class="hero-filigrane">Notes</div>
+  <div class="hero-content">
+    <div class="hero-tag">6 voyages de sagesse accumulée</div>
+    <h1>Le carnet<br><em>de route</em></h1>
+    <div class="divider"></div>
+    <p class="hero-sub">Tout ce qu'on a appris au fil des années pour voyager mieux, plus facilement et sans mauvaises surprises.</p>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="section-header">
+    <h2 class="section-title">Nos conseils pratiques</h2>
+  </div>
+
+  <div class="carnet-grid">
+
+    <!-- Transport -->
+    <div class="carnet-card fade-up">
+      <div class="carnet-card-header">
+        <span class="carnet-icon">🚄</span>
+        <span class="carnet-card-title">Venir à Londres</span>
+      </div>
+      <div class="carnet-card-body">
+        <div class="transport-step">
+          <div class="transport-num">1</div>
+          <div><div class="transport-title">Réserver l'Eurostar tôt</div><div class="transport-desc">Idéalement 6 à 8 semaines avant. Les tarifs Standard Premier en semaine restent raisonnables. Éviter le vendredi soir et le dimanche soir (prix x2).</div></div>
+        </div>
+        <div class="transport-step">
+          <div class="transport-num">2</div>
+          <div><div class="transport-title">Paris Gare du Nord → St Pancras</div><div class="transport-desc">2h15 de trajet. Arriver 30 min avant, les contrôles douaniers se font côté français. Prévoir d'emporter de la nourriture, les wagons-restaurants sont hors de prix.</div></div>
+        </div>
+        <div class="transport-step">
+          <div class="transport-num">3</div>
+          <div><div class="transport-title">Oyster Card dès l'arrivée</div><div class="transport-desc">À acheter aux distributeurs de St Pancras. Le cap journalier (Daily Cap) est automatique — on ne paye jamais plus d'un certain montant par jour.</div></div>
+        </div>
+        <div class="transport-step">
+          <div class="transport-num">4</div>
+          <div><div class="transport-title">Carte bancaire sans contact</div><div class="transport-desc">Depuis 2023, on peut aussi utiliser directement sa carte bancaire sur le métro et les bus, avec le même Daily Cap appliqué.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Budget -->
+    <div class="carnet-card fade-up">
+      <div class="carnet-card-header">
+        <span class="carnet-icon">💷</span>
+        <span class="carnet-card-title">Budget indicatif (par personne)</span>
+      </div>
+      <div class="carnet-card-body">
+        <div class="budget-row">
+          <span class="budget-cat">Eurostar A/R</span>
+          <div><div class="budget-val">~120 €</div><div class="budget-note">Si réservé tôt</div></div>
+        </div>
+        <div class="budget-row">
+          <span class="budget-cat">Hôtel (par nuit)</span>
+          <div><div class="budget-val">80–140 €</div><div class="budget-note">Selon quartier</div></div>
+        </div>
+        <div class="budget-row">
+          <span class="budget-cat">Transports sur place</span>
+          <div><div class="budget-val">~8–12 £/j</div><div class="budget-note">Daily Cap métro/bus</div></div>
+        </div>
+        <div class="budget-row">
+          <span class="budget-cat">Repas</span>
+          <div><div class="budget-val">30–60 £/j</div><div class="budget-note">Borough Market le midi !</div></div>
+        </div>
+        <div class="budget-row">
+          <span class="budget-cat">Afternoon tea</span>
+          <div><div class="budget-val">50–90 £/pers</div><div class="budget-note">Fortnum & Mason</div></div>
+        </div>
+        <div class="budget-row">
+          <span class="budget-cat">Musées</span>
+          <div><div class="budget-val">Souvent gratuit</div><div class="budget-note">Tate, British Museum…</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Météo -->
+    <div class="carnet-card fade-up full-width">
+      <div class="carnet-card-header">
+        <span class="carnet-icon">☁️</span>
+        <span class="carnet-card-title">La météo londonienne — ce qu'il faut savoir</span>
+      </div>
+      <div class="carnet-card-body">
+        <div class="weather-grid" style="margin-bottom:1rem">
+          <div class="weather-season">
+            <div class="ws-name">Printemps</div>
+            <div class="ws-temp">10–16°</div>
+            <div class="ws-desc">Variable, quelques éclaircies</div>
+          </div>
+          <div class="weather-season">
+            <div class="ws-name">Été</div>
+            <div class="ws-temp">18–24°</div>
+            <div class="ws-desc">Le meilleur moment</div>
+          </div>
+          <div class="weather-season">
+            <div class="ws-name">Automne</div>
+            <div class="ws-temp">10–16°</div>
+            <div class="ws-desc">Couleurs magnifiques</div>
+          </div>
+          <div class="weather-season">
+            <div class="ws-name">Hiver</div>
+            <div class="ws-temp">4–9°</div>
+            <div class="ws-desc">Ambiance Noël</div>
+          </div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-tag warn">Règle d'or</span>
+          <div class="tip-title">Toujours prévoir un imperméable léger</div>
+          <div class="tip-desc">Même en plein été, une averse peut arriver en 10 minutes. Un coupe-vent imperméable plié dans le sac, c'est indispensable.</div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-tag good">Astuce</span>
+          <div class="tip-title">La météo change vite — restez flexibles</div>
+          <div class="tip-desc">Prévoir les musées en cas de pluie et les parcs/balades si soleil. Un programme trop rigide sera gâché par la météo.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bons plans -->
+    <div class="carnet-card fade-up">
+      <div class="carnet-card-header">
+        <span class="carnet-icon">✨</span>
+        <span class="carnet-card-title">Bons plans &amp; astuces</span>
+      </div>
+      <div class="carnet-card-body">
+        <div class="tip-item">
+          <span class="tip-tag good">Gratuit</span>
+          <div class="tip-title">La majorité des grands musées sont gratuits</div>
+          <div class="tip-desc">British Museum, Tate Modern, Tate Britain, National Gallery, V&amp;A, Natural History Museum. Seules les expos temporaires sont payantes.</div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-tag info">Timing</span>
+          <div class="tip-title">Borough Market : jeudi &amp; vendredi</div>
+          <div class="tip-desc">Le samedi est bondé. Les jeudis et vendredis midi, c'est parfait pour un déjeuner tranquille.</div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-tag good">Économie</span>
+          <div class="tip-title">Bus plutôt que taxi</div>
+          <div class="tip-desc">Les bus londoniens sont excellents et couverts par l'Oyster Card. Le trajet en double-decker sur le Tower Bridge vaut le détour à lui seul !</div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-tag warn">Attention</span>
+          <div class="tip-title">Les restos populaires : réserver</div>
+          <div class="tip-desc">Dishoom, Ottolenghi, Rules… les meilleures tables se réservent des semaines à l'avance. Ne pas attendre le dernier moment.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hébergement -->
+    <div class="carnet-card fade-up">
+      <div class="carnet-card-header">
+        <span class="carnet-icon">🏨</span>
+        <span class="carnet-card-title">Où dormir</span>
+      </div>
+      <div class="carnet-card-body">
+        <div class="tip-item">
+          <span class="tip-tag good">Nos quartiers préférés</span>
+          <div class="tip-title">London Bridge / Southwark</div>
+          <div class="tip-desc">Excellente situation, proche de Borough Market et de la Tate. Bien desservi, moins touristique que le centre.</div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-tag info">Alternatif</span>
+          <div class="tip-title">Marylebone / Fitzrovia</div>
+          <div class="tip-desc">Quartier chic et calme, bien placé pour explorer le West End, les musées et Oxford Street. Nombreux hôtels de charme.</div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-tag warn">Éviter</span>
+          <div class="tip-title">Les zones très centrales (Piccadilly, Oxford St)</div>
+          <div class="tip-desc">Pratique sur le papier, mais bruyant, cher, et on finit par marcher autant qu'ailleurs. Mieux vaut un bon métro près d'un quartier de caractère.</div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-tag good">Notre critère n°1</span>
+          <div class="tip-title">Être à 5 min à pied d'une station de métro</div>
+          <div class="tip-desc">Le tube est si efficace qu'être bien connecté vaut mieux qu'être "au centre".</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Tea<span>For</span>Three</div>
+    <div class="footer-tagline">Trois voyageurs, une ville, une tradition</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="voyages.html">Voyages</a></li>
+      <li><a href="incontournables.html">Incontournables</a></li>
+      <li><a href="carnet.html">Carnet</a></li>
+      <li><a href="avenir.html">À venir</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

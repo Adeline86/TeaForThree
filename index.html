@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TeaForThree — Notre Londres en famille</title>
+  <meta name="description" content="Les aventures londoniennes d'une famille française, une fois par an depuis 2019." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:0.5rem}
+    .hl-card{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.4rem 1.2rem;text-align:center}
+    .hl-num{font-family:'Playfair Display',serif;font-size:44px;font-weight:400;color:var(--gold);line-height:1;margin-bottom:4px}
+    .hl-lbl{font-size:11.5px;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-light)}
+
+    .trips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+    .trip-card{cursor:pointer;text-decoration:none;color:inherit;display:block}
+    .trip-thumb{height:155px;position:relative;overflow:hidden}
+    .trip-thumb-2024{background:linear-gradient(145deg,#0d2a38 0%,#1a5570 55%,#3b8aaa 100%)}
+    .trip-thumb-2023{background:linear-gradient(145deg,#2a1208 0%,#6b3010 55%,#b06030 100%)}
+    .trip-thumb-2022{background:linear-gradient(145deg,#0e2010 0%,#286030 55%,#5aa050 100%)}
+    .trip-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.03) 0,rgba(255,255,255,0.03) 1px,transparent 0,transparent 50%);background-size:10px 10px}
+    .trip-year-big{position:absolute;bottom:-8px;right:12px;font-family:'Playfair Display',serif;font-size:82px;font-weight:400;color:rgba(255,255,255,0.1);line-height:1;user-select:none}
+    .trip-season{position:absolute;top:14px;left:14px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5)}
+    .trip-body{padding:14px 16px 16px}
+    .trip-year-lbl{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;margin-bottom:4px}
+    .trip-headline{font-size:13px;color:var(--text-light);margin-bottom:10px;line-height:1.5}
+    .trip-meta{display:flex;gap:6px;flex-wrap:wrap}
+
+    .next-strip{background:var(--gold-pale);border:0.5px solid var(--border-strong);border-radius:var(--radius);padding:1.5rem 1.75rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+    .next-tag{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--brown-mid);margin-bottom:5px}
+    .next-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;margin-bottom:4px}
+    .next-desc{font-size:13px;color:var(--text-mid)}
+    .next-wishes{display:flex;gap:8px;flex-wrap:wrap}
+    .wish-pill{font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid var(--gold);color:var(--brown-mid);background:rgba(255,255,255,0.55)}
+
+    @media(max-width:640px){
+      .highlights{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .trips-grid{grid-template-columns:1fr}
+      .next-strip{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Tea<span>For</span>Three</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Accueil</a></li>
+    <li><a href="voyages.html">Nos voyages</a></li>
+    <li><a href="incontournables.html">Incontournables</a></li>
+    <li><a href="carnet.html">Carnet de route</a></li>
+    <li><a href="avenir.html">À venir</a></li>
+  </ul>
+  <span class="nav-tea">London, every year</span>
+</nav>
+
+<div class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-filigrane">London</div>
+  <div class="hero-content">
+    <div class="hero-tag">Une tradition en famille · Depuis 2019</div>
+    <h1>Notre Londres,<br><em>chaque année</em></h1>
+    <div class="divider"></div>
+    <p class="hero-sub">Les aventures de trois voyageurs français qui reviennent à Londres pour l'explorer, la savourer et la redécouvrir ensemble.</p>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="section-header">
+    <h2 class="section-title">Notre histoire</h2>
+  </div>
+
+  <div class="highlights">
+    <div class="hl-card fade-up"><div class="hl-num">6</div><div class="hl-lbl">Voyages</div></div>
+    <div class="hl-card fade-up"><div class="hl-num">30+</div><div class="hl-lbl">Quartiers explorés</div></div>
+    <div class="hl-card fade-up"><div class="hl-num">∞</div><div class="hl-lbl">Tasses de thé</div></div>
+  </div>
+
+  <div class="section-header">
+    <h2 class="section-title">Derniers voyages</h2>
+    <a href="voyages.html" class="section-link">Tous les voyages →</a>
+  </div>
+
+  <div class="trips-grid">
+    <a href="voyage-2024.html" class="trip-card">
+      <div class="card">
+        <div class="trip-thumb trip-thumb-2024"><div class="trip-pattern"></div><div class="trip-season">Printemps</div><div class="trip-year-big">24</div></div>
+        <div class="trip-body">
+          <div class="trip-year-lbl">Voyage 2024</div>
+          <div class="trip-headline">Shoreditch, Borough Market &amp; la Tate Modern</div>
+          <div class="trip-meta"><span class="badge gold">4 jours</span><span class="badge">East London</span></div>
+        </div>
+      </div>
+    </a>
+    <a href="voyage-2023.html" class="trip-card">
+      <div class="card">
+        <div class="trip-thumb trip-thumb-2023"><div class="trip-pattern"></div><div class="trip-season">Automne</div><div class="trip-year-big">23</div></div>
+        <div class="trip-body">
+          <div class="trip-year-lbl">Voyage 2023</div>
+          <div class="trip-headline">Notting Hill, Hyde Park &amp; afternoon tea</div>
+          <div class="trip-meta"><span class="badge gold">5 jours</span><span class="badge">West London</span></div>
+        </div>
+      </div>
+    </a>
+    <a href="voyage-2022.html" class="trip-card">
+      <div class="card">
+        <div class="trip-thumb trip-thumb-2022"><div class="trip-pattern"></div><div class="trip-season">Été</div><div class="trip-year-big">22</div></div>
+        <div class="trip-body">
+          <div class="trip-year-lbl">Voyage 2022</div>
+          <div class="trip-headline">Greenwich, Camden &amp; les musées royaux</div>
+          <div class="trip-meta"><span class="badge gold">4 jours</span><span class="badge">South-East</span></div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="quote-band">
+    <p class="quote-text">When a man is tired of London, he is tired of life.</p>
+    <div class="quote-author">Samuel Johnson, 1777</div>
+  </div>
+
+  <div class="section-header">
+    <h2 class="section-title">Prochain voyage</h2>
+    <a href="avenir.html" class="section-link">Nos envies →</a>
+  </div>
+
+  <div class="next-strip fade-up">
+    <div>
+      <div class="next-tag">En préparation</div>
+      <div class="next-title">Londres 2025</div>
+      <div class="next-desc">Nos quartiers et expériences à découvrir cette année</div>
+    </div>
+    <div class="next-wishes">
+      <span class="wish-pill">Hackney</span>
+      <span class="wish-pill">Columbia Road</span>
+      <span class="wish-pill">Brick Lane</span>
+      <span class="wish-pill">East End street art</span>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Tea<span>For</span>Three</div>
+    <div class="footer-tagline">Trois voyageurs, une ville, une tradition</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="voyages.html">Voyages</a></li>
+      <li><a href="incontournables.html">Incontournables</a></li>
+      <li><a href="carnet.html">Carnet</a></li>
+      <li><a href="avenir.html">À venir</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

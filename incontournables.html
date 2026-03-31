@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incontournables — TeaForThree</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem}
+    .filter-btn{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;padding:6px 14px;border-radius:20px;border:0.5px solid var(--border-strong);color:var(--text-light);background:transparent;cursor:pointer;transition:all 0.2s;font-family:'Lato',sans-serif}
+    .filter-btn:hover,.filter-btn.on{background:var(--gold);border-color:var(--gold);color:var(--white)}
+
+    .spots-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+    .spot-card{cursor:pointer}
+    .spot-card-inner{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:box-shadow 0.25s,transform 0.25s,border-color 0.25s;height:100%}
+    .spot-card-inner:hover{box-shadow:var(--shadow-hover);border-color:var(--border-strong);transform:translateY(-2px)}
+
+    .spot-header{height:90px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .spot-icon{font-family:'Playfair Display',serif;font-size:38px;font-weight:400;opacity:0.9;line-height:1;position:relative;z-index:1}
+    .spot-header-resto{background:linear-gradient(135deg,#2a1208,#6b3010)}
+    .spot-header-musee{background:linear-gradient(135deg,#0d2a38,#1a5570)}
+    .spot-header-parc{background:linear-gradient(135deg,#0e2010,#286030)}
+    .spot-header-marche{background:linear-gradient(135deg,#181008,#503018)}
+    .spot-header-balade{background:linear-gradient(135deg,#1a1030,#442870)}
+    .spot-header-tea{background:linear-gradient(135deg,#2C1810,#6B3A1F)}
+
+    .spot-body{padding:14px 16px 16px}
+    .spot-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:4px}
+    .spot-cat{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .spot-desc{font-size:13px;color:var(--text-light);line-height:1.55;margin-bottom:10px}
+    .spot-footer{display:flex;align-items:center;justify-content:space-between}
+    .spot-stars{color:var(--gold);font-size:12px;letter-spacing:2px}
+    .spot-year{font-size:10px;color:var(--text-light)}
+
+    @media(max-width:640px){.spots-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Tea<span>For</span>Three</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="voyages.html">Nos voyages</a></li>
+    <li><a href="incontournables.html" class="active">Incontournables</a></li>
+    <li><a href="carnet.html">Carnet de route</a></li>
+    <li><a href="avenir.html">À venir</a></li>
+  </ul>
+  <span class="nav-tea">London, every year</span>
+</nav>
+
+<div class="hero" style="min-height:280px">
+  <div class="hero-pattern"></div>
+  <div class="hero-filigrane">Spots</div>
+  <div class="hero-content">
+    <div class="hero-tag">Notre sélection · 6 voyages</div>
+    <h1>Nos <em>incontournables</em></h1>
+    <div class="divider"></div>
+    <p class="hero-sub">Les lieux qu'on aime, qu'on refait, et ceux qu'on recommande les yeux fermés.</p>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="section-header">
+    <h2 class="section-title">Nos coups de cœur</h2>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn on" onclick="filter('tous',this)">Tous</button>
+    <button class="filter-btn" onclick="filter('resto',this)">Restos</button>
+    <button class="filter-btn" onclick="filter('musee',this)">Musées</button>
+    <button class="filter-btn" onclick="filter('parc',this)">Parcs</button>
+    <button class="filter-btn" onclick="filter('marche',this)">Marchés</button>
+    <button class="filter-btn" onclick="filter('tea',this)">Tea time</button>
+    <button class="filter-btn" onclick="filter('balade',this)">Balades</button>
+  </div>
+
+  <div class="spots-grid" id="spots-grid">
+
+    <div class="spot-card fade-up" data-cat="tea">
+      <div class="spot-card-inner">
+        <div class="spot-header spot-header-tea"><span class="spot-icon" style="color:rgba(212,169,106,0.9)">🫖</span></div>
+        <div class="spot-body">
+          <div class="spot-cat">Tea time</div>
+          <div class="spot-name">Fortnum &amp; Mason</div>
+          <div class="spot-desc">L'afternoon tea ultime. Scones, clotted cream, finger sandwiches dans un décor à l'ancienne. Un classique indétrônable.</div>
+          <div class="spot-footer"><span class="spot-stars">★★★★★</span><span class="spot-year">depuis 2023</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot-card fade-up" data-cat="marche">
+      <div class="spot-card-inner">
+        <div class="spot-header spot-header-marche"><span class="spot-icon" style="color:rgba(212,169,106,0.9)">🛍</span></div>
+        <div class="spot-body">
+          <div class="spot-cat">Marché</div>
+          <div class="spot-name">Borough Market</div>
+          <div class="spot-desc">Notre rituel incontournable. Fromageries, épiceries fines, street food du monde entier. À faire un jeudi ou vendredi pour éviter la foule du samedi.</div>
+          <div class="spot-footer"><span class="spot-stars">★★★★★</span><span class="spot-year">depuis 2019</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot-card fade-up" data-cat="musee">
+      <div class="spot-card-inner">
+        <div class="spot-header spot-header-musee"><span class="spot-icon" style="color:rgba(212,169,106,0.9)">🎨</span></div>
+        <div class="spot-body">
+          <div class="spot-cat">Musée</div>
+          <div class="spot-name">Tate Modern</div>
+          <div class="spot-desc">Art contemporain sur les bords de la Tamise. La vue depuis le Viewing Level au coucher du soleil est magique. Entrée gratuite pour la collection permanente.</div>
+          <div class="spot-footer"><span class="spot-stars">★★★★★</span><span class="spot-year">depuis 2022</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot-card fade-up" data-cat="balade">
+      <div class="spot-card-inner">
+        <div class="spot-header spot-header-balade"><span class="spot-icon" style="color:rgba(212,169,106,0.9)">🌿</span></div>
+        <div class="spot-body">
+          <div class="spot-cat">Balade</div>
+          <div class="spot-name">Primrose Hill</div>
+          <div class="spot-desc">La vue sur les toits de Londres depuis cette colline du nord. Idéale en fin d'après-midi. Le quartier alentour est charmant avec ses maisons colorées.</div>
+          <div class="spot-footer"><span class="spot-stars">★★★★☆</span><span class="spot-year">depuis 2021</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot-card fade-up" data-cat="resto">
+      <div class="spot-card-inner">
+        <div class="spot-header spot-header-resto"><span class="spot-icon" style="color:rgba(212,169,106,0.9)">🍽</span></div>
+        <div class="spot-body">
+          <div class="spot-cat">Restaurant</div>
+          <div class="spot-name">Dishoom</div>
+          <div class="spot-desc">Cuisine indienne de Bombay, ambiance rétro magnifique. Le bacon naan roll au petit déjeuner est légendaire. File d'attente obligatoire, mais ça vaut le coup.</div>
+          <div class="spot-footer"><span class="spot-stars">★★★★★</span><span class="spot-year">depuis 2022</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot-card fade-up" data-cat="marche">
+      <div class="spot-card-inner">
+        <div class="spot-header spot-header-marche"><span class="spot-icon" style="color:rgba(212,169,106,0.9)">🌸</span></div>
+        <div class="spot-body">
+          <div class="spot-cat">Marché</div>
+          <div class="spot-name">Columbia Road Flower Market</div>
+          <div class="spot-desc">Chaque dimanche matin, cette rue étroite se transforme en explosion de couleurs et de parfums. Un spectacle unique et très londonien.</div>
+          <div class="spot-footer"><span class="spot-stars">★★★★★</span><span class="spot-year">depuis 2024</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot-card fade-up" data-cat="parc">
+      <div class="spot-card-inner">
+        <div class="spot-header spot-header-parc"><span class="spot-icon" style="color:rgba(212,169,106,0.9)">🌳</span></div>
+        <div class="spot-body">
+          <div class="spot-cat">Parc</div>
+          <div class="spot-name">Hyde Park</div>
+          <div class="spot-desc">Inévitable en automne. Les feuilles cuivrées autour du Serpentine Lake sont un spectacle. On y a passé une demi-journée à flâner sans destination précise.</div>
+          <div class="spot-footer"><span class="spot-stars">★★★★☆</span><span class="spot-year">depuis 2023</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot-card fade-up" data-cat="musee">
+      <div class="spot-card-inner">
+        <div class="spot-header spot-header-musee"><span class="spot-icon" style="color:rgba(212,169,106,0.9)">🏛</span></div>
+        <div class="spot-body">
+          <div class="spot-cat">Musée</div>
+          <div class="spot-name">British Museum</div>
+          <div class="spot-desc">La Grande Cour vitrée est à elle seule un chef-d'œuvre architectural. On s'y perd des heures entre les momies égyptiennes et les marbres d'Élgin.</div>
+          <div class="spot-footer"><span class="spot-stars">★★★★☆</span><span class="spot-year">depuis 2019</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot-card fade-up" data-cat="balade">
+      <div class="spot-card-inner">
+        <div class="spot-header spot-header-balade"><span class="spot-icon" style="color:rgba(212,169,106,0.9)">🎨</span></div>
+        <div class="spot-body">
+          <div class="spot-cat">Balade</div>
+          <div class="spot-name">Shoreditch Street Art</div>
+          <div class="spot-desc">Un musée à ciel ouvert. Chaque visite révèle de nouvelles œuvres. Brick Lane, Redchurch Street et les ruelles alentour regorgent de fresques.</div>
+          <div class="spot-footer"><span class="spot-stars">★★★★★</span><span class="spot-year">depuis 2024</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:2.5rem;padding:1.5rem 1.75rem;background:var(--gold-pale);border:0.5px solid var(--border-strong);border-radius:var(--radius);font-size:13px;color:var(--text-mid)">
+    <strong style="font-family:'Playfair Display',serif;font-weight:400;font-size:15px;color:var(--text-dark);display:block;margin-bottom:6px">Vous avez des spots à nous recommander ?</strong>
+    Cette liste est la nôtre — subjective et en constante évolution. Revenez la voir après chaque voyage, elle s'enrichit !
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Tea<span>For</span>Three</div>
+    <div class="footer-tagline">Trois voyageurs, une ville, une tradition</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="voyages.html">Voyages</a></li>
+      <li><a href="incontournables.html">Incontournables</a></li>
+      <li><a href="carnet.html">Carnet</a></li>
+      <li><a href="avenir.html">À venir</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+function filter(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.spot-card').forEach(card => {
+    if (cat === 'tous' || card.dataset.cat === cat) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

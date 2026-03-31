@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À venir — TeaForThree</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .next-hero-detail{margin-top:1.5rem;display:flex;gap:10px;flex-wrap:wrap}
+    .next-pill{font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid rgba(212,169,106,0.5);color:var(--gold-light);background:rgba(181,118,58,0.1)}
+
+    .wishlist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+
+    .wish-card{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .wish-card-thumb{height:120px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .wt-hackney{background:linear-gradient(145deg,#181028,#3a2060)}
+    .wt-columbiaroad{background:linear-gradient(145deg,#0e2010,#286030)}
+    .wt-bricklane{background:linear-gradient(145deg,#1a0e08,#503020)}
+    .wt-greenwich{background:linear-gradient(145deg,#0a1820,#1a4050)}
+    .wt-kew{background:linear-gradient(145deg,#101808,#2a4820)}
+    .wt-peckham{background:linear-gradient(145deg,#200808,#602020)}
+    .wt-highgate{background:linear-gradient(145deg,#101018,#303048)}
+    .wt-richmond{background:linear-gradient(145deg,#101808,#304828)}
+
+    .wish-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.03) 0,rgba(255,255,255,0.03) 1px,transparent 0,transparent 50%);background-size:10px 10px}
+    .wish-thumb-label{position:relative;z-index:1;font-family:'Playfair Display',serif;font-size:13px;color:rgba(255,255,255,0.55);letter-spacing:0.06em}
+
+    .wish-body{padding:12px 14px 14px}
+    .wish-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:5px}
+    .wish-desc{font-size:12.5px;color:var(--text-light);line-height:1.5;margin-bottom:10px}
+    .wish-tags{display:flex;gap:5px;flex-wrap:wrap}
+
+    .status-row{display:flex;gap:10px;margin-bottom:2.5rem;flex-wrap:wrap}
+    .status-card{flex:1;min-width:180px;background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.4rem}
+    .status-icon{font-size:22px;margin-bottom:8px;display:block}
+    .status-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:4px}
+    .status-val{font-size:12.5px;color:var(--text-light);line-height:1.45}
+
+    .ideas-note{background:var(--gold-pale);border:0.5px solid var(--border-strong);border-radius:var(--radius);padding:1.4rem 1.6rem;margin-top:2rem}
+    .ideas-note-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:6px}
+    .ideas-note-text{font-size:13px;color:var(--text-mid);line-height:1.6}
+
+    @media(max-width:640px){
+      .status-row{flex-direction:column}
+      .wishlist-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Tea<span>For</span>Three</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="voyages.html">Nos voyages</a></li>
+    <li><a href="incontournables.html">Incontournables</a></li>
+    <li><a href="carnet.html">Carnet de route</a></li>
+    <li><a href="avenir.html" class="active">À venir</a></li>
+  </ul>
+  <span class="nav-tea">London, every year</span>
+</nav>
+
+<div class="hero" style="min-height:300px">
+  <div class="hero-pattern"></div>
+  <div class="hero-filigrane">2025</div>
+  <div class="hero-content">
+    <div class="hero-tag">Prochain chapitre · En préparation</div>
+    <h1>Londres <em>2025</em></h1>
+    <div class="divider"></div>
+    <p class="hero-sub">Nos envies, nos projets et les quartiers qu'on n'a pas encore explorés.</p>
+    <div class="next-hero-detail">
+      <span class="next-pill">East End</span>
+      <span class="next-pill">Hackney</span>
+      <span class="next-pill">Brick Lane</span>
+      <span class="next-pill">Columbia Road</span>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="section-header">
+    <h2 class="section-title">Où en sommes-nous ?</h2>
+  </div>
+
+  <div class="status-row">
+    <div class="status-card fade-up">
+      <span class="status-icon">📅</span>
+      <div class="status-title">Dates</div>
+      <div class="status-val">À confirmer — printemps ou automne 2025. On hésite encore entre les cerisiers et les couleurs d'automne !</div>
+    </div>
+    <div class="status-card fade-up">
+      <span class="status-icon">🚄</span>
+      <div class="status-title">Eurostar</div>
+      <div class="status-val">Pas encore réservé. On attend de caler les dates définitives — rappel : réserver 6–8 semaines avant.</div>
+    </div>
+    <div class="status-card fade-up">
+      <span class="status-icon">🏨</span>
+      <div class="status-title">Hébergement</div>
+      <div class="status-val">Idée : essayer Hackney ou Bethnal Green pour rester dans l'ambiance East London de notre prochain séjour.</div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <h2 class="section-title">Notre liste de souhaits</h2>
+  </div>
+
+  <div class="wishlist-grid">
+
+    <div class="wish-card fade-up">
+      <div class="wish-card-thumb wt-hackney"><div class="wish-pattern"></div><span class="wish-thumb-label">Hackney</span></div>
+      <div class="wish-body">
+        <div class="wish-name">Hackney &amp; Victoria Park</div>
+        <div class="wish-desc">Le quartier le plus cool de l'East London. Cafés indépendants, Victoria Park, et la scène culturelle de Broadway Market.</div>
+        <div class="wish-tags"><span class="badge gold">Priorité haute</span><span class="badge">Balade</span></div>
+      </div>
+    </div>
+
+    <div class="wish-card fade-up">
+      <div class="wish-card-thumb wt-columbiaroad"><div class="wish-pattern"></div><span class="wish-thumb-label">Columbia Road</span></div>
+      <div class="wish-body">
+        <div class="wish-name">Columbia Road Market</div>
+        <div class="wish-desc">Le mythique marché aux fleurs du dimanche matin. On était passé en semaine en 2024 — cette fois on y sera le dimanche !</div>
+        <div class="wish-tags"><span class="badge gold">Priorité haute</span><span class="badge">Marché</span></div>
+      </div>
+    </div>
+
+    <div class="wish-card fade-up">
+      <div class="wish-card-thumb wt-bricklane"><div class="wish-pattern"></div><span class="wish-thumb-label">Brick Lane</span></div>
+      <div class="wish-body">
+        <div class="wish-name">Brick Lane le dimanche</div>
+        <div class="wish-desc">Le grand marché du dimanche matin — vêtements vintage, street food, disques. À faire tôt le matin avant la foule.</div>
+        <div class="wish-tags"><span class="badge">Marché</span><span class="badge">Street art</span></div>
+      </div>
+    </div>
+
+    <div class="wish-card fade-up">
+      <div class="wish-card-thumb wt-kew"><div class="wish-pattern"></div><span class="wish-thumb-label">Kew Gardens</span></div>
+      <div class="wish-body">
+        <div class="wish-name">Kew Royal Botanic Gardens</div>
+        <div class="wish-desc">Les jardins botaniques royaux — idéaux au printemps pour les cerisiers ou en automne pour les couleurs. Un peu excentré mais ça vaut le déplacement.</div>
+        <div class="wish-tags"><span class="badge">Parc</span><span class="badge">Botanique</span></div>
+      </div>
+    </div>
+
+    <div class="wish-card fade-up">
+      <div class="wish-card-thumb wt-highgate"><div class="wish-pattern"></div><span class="wish-thumb-label">Highgate</span></div>
+      <div class="wish-body">
+        <div class="wish-name">Highgate Cemetery</div>
+        <div class="wish-desc">Le cimetière victorien le plus célèbre de Londres — Karl Marx, George Eliot, Douglas Adams y reposent. Atmosphère unique et végétation envahissante.</div>
+        <div class="wish-tags"><span class="badge">Histoire</span><span class="badge">Balade</span></div>
+      </div>
+    </div>
+
+    <div class="wish-card fade-up">
+      <div class="wish-card-thumb wt-richmond"><div class="wish-pattern"></div><span class="wish-thumb-label">Richmond</span></div>
+      <div class="wish-body">
+        <div class="wish-name">Richmond Park &amp; les cerfs</div>
+        <div class="wish-desc">Le plus grand espace vert de Londres, où vivent des cerfs en liberté. Un dépaysement total à 40 min du centre en train.</div>
+        <div class="wish-tags"><span class="badge">Parc</span><span class="badge">Nature</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ideas-note fade-up">
+    <div class="ideas-note-title">Et après 2025 ?</div>
+    <div class="ideas-note-text">Londres est inépuisable. On a encore des idées pour des éditions futures : Dulwich Village &amp; sa galerie, une nuit dans un hôtel avec vue sur la Tamise, explorer les marchés de Greenwich un dimanche, ou encore tenter l'expérience d'un match de football dans un stade anglais. La liste ne s'arrête jamais !</div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Tea<span>For</span>Three</div>
+    <div class="footer-tagline">Trois voyageurs, une ville, une tradition</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="voyages.html">Voyages</a></li>
+      <li><a href="incontournables.html">Incontournables</a></li>
+      <li><a href="carnet.html">Carnet</a></li>
+      <li><a href="avenir.html">À venir</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

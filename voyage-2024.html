@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voyage 2024 — TeaForThree</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .trip-hero{background:linear-gradient(145deg,#0d2a38 0%,#1a5570 55%,#3b8aaa 100%)}
+
+    .trip-meta-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:2rem}
+
+    .trip-body-grid{display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:start}
+
+    .prose p{font-size:15px;line-height:1.8;color:var(--text-mid);margin-bottom:1.2rem}
+    .prose h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin:2rem 0 0.6rem;color:var(--text-dark)}
+
+    .day-list{display:flex;flex-direction:column;gap:0}
+    .day-item{padding:1rem 0;border-bottom:0.5px solid var(--border)}
+    .day-item:last-child{border-bottom:none}
+    .day-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+    .day-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;margin-bottom:3px}
+    .day-desc{font-size:12.5px;color:var(--text-light);line-height:1.5}
+
+    .sidebar-card{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.4rem;margin-bottom:14px}
+    .sidebar-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:0.5px solid var(--border)}
+    .info-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:0.5px solid var(--border);font-size:13px}
+    .info-row:last-child{border-bottom:none}
+    .info-key{color:var(--text-light)}
+    .info-val{font-weight:400;color:var(--text-dark)}
+
+    .spot-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+    .spot-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-mid);line-height:1.45}
+    .spot-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px}
+
+    .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:1.5rem}
+    .photo-placeholder{border-radius:var(--radius-sm);overflow:hidden;height:100px;display:flex;align-items:center;justify-content:center;border:0.5px dashed var(--border-strong);background:var(--cream-dark)}
+    .photo-placeholder span{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light)}
+
+    .nav-trips{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:0.5px solid var(--border)}
+    .nav-trip-link{text-decoration:none;color:inherit}
+    .nav-trip-dir{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px}
+    .nav-trip-name{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold)}
+
+    @media(max-width:700px){
+      .trip-body-grid{grid-template-columns:1fr}
+      .photo-grid{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Tea<span>For</span>Three</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="voyages.html" class="active">Nos voyages</a></li>
+    <li><a href="incontournables.html">Incontournables</a></li>
+    <li><a href="carnet.html">Carnet de route</a></li>
+    <li><a href="avenir.html">À venir</a></li>
+  </ul>
+  <span class="nav-tea">London, every year</span>
+</nav>
+
+<div class="hero trip-hero" style="min-height:320px">
+  <div class="hero-pattern"></div>
+  <div class="hero-filigrane">2024</div>
+  <div class="hero-content">
+    <div class="hero-tag">Printemps · Voyage n°5</div>
+    <h1>Londres <em>2024</em></h1>
+    <div class="divider"></div>
+    <p class="hero-sub">Shoreditch, Borough Market et la Tate Modern</p>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="trip-meta-bar" style="padding-top:2rem">
+    <span class="badge gold">Printemps 2024</span>
+    <span class="badge">4 jours · 3 nuits</span>
+    <span class="badge">East London</span>
+    <span class="badge">Eurostar</span>
+    <a href="voyages.html" style="margin-left:auto;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none">← Tous les voyages</a>
+  </div>
+
+  <div class="trip-body-grid">
+
+    <div>
+      <div class="prose">
+        <p>Cette cinquième édition avait un goût particulier : nous avions décidé de sortir des sentiers battus et de plonger dans l'East London, ce quartier créatif et en perpétuelle transformation que nous n'avions fait qu'effleurer lors de nos premiers voyages.</p>
+        <p>Shoreditch nous a surpris par son énergie et la richesse de ses street arts. Chaque ruelle est une galerie à ciel ouvert. Nous avons passé une matinée entière à déambuler, carnet en main, repérant les fresques et les boutiques vintage qui s'y nichent.</p>
+        <p>Borough Market reste notre rituel immuable. Impossible de venir à Londres sans y faire un tour, grappiller des fromages, des olives, et terminer avec une fish &amp; chips au bord de la Tamise.</p>
+        <h3>Le moment inoubliable</h3>
+        <p>La Tate Modern au coucher du soleil. Nous avions pris le temps de monter au Viewing Level — une vue à 360° sur la ville, la Tamise rose, Saint Paul's en silhouette. Un de ces moments qui justifient à eux seuls le voyage.</p>
+      </div>
+
+      <h3 class="prose" style="font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin:2rem 0 1rem;color:var(--text-dark)">Le programme jour par jour</h3>
+
+      <div class="day-list">
+        <div class="day-item fade-up">
+          <div class="day-label">Jour 1 · Jeudi</div>
+          <div class="day-title">Arrivée &amp; South Bank</div>
+          <div class="day-desc">Eurostar de 9h, hôtel près de London Bridge. Afternoon walk sur le South Bank, Borough Market, dîner au Oxo Tower.</div>
+        </div>
+        <div class="day-item fade-up">
+          <div class="day-label">Jour 2 · Vendredi</div>
+          <div class="day-title">Shoreditch &amp; street art</div>
+          <div class="day-desc">Brick Lane le matin, déjeuner dans un café de Shoreditch, après-midi galeries &amp; boutiques vintage autour de Redchurch Street.</div>
+        </div>
+        <div class="day-item fade-up">
+          <div class="day-label">Jour 3 · Samedi</div>
+          <div class="day-title">Tate Modern &amp; Bankside</div>
+          <div class="day-desc">Matinée au Borough Market, Tate Modern l'après-midi, montée au Viewing Level au coucher du soleil. Dîner à Bermondsey.</div>
+        </div>
+        <div class="day-item fade-up">
+          <div class="day-label">Jour 4 · Dimanche</div>
+          <div class="day-title">Columbia Road &amp; retour</div>
+          <div class="day-desc">Le célèbre marché aux fleurs de Columbia Road, brunch à Spitalfields, Eurostar de 17h.</div>
+        </div>
+      </div>
+
+      <h3 class="prose" style="font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin:2rem 0 1rem;color:var(--text-dark)">Photos du voyage</h3>
+      <div class="photo-grid">
+        <div class="photo-placeholder"><span>Photo 1</span></div>
+        <div class="photo-placeholder"><span>Photo 2</span></div>
+        <div class="photo-placeholder"><span>Photo 3</span></div>
+        <div class="photo-placeholder"><span>Photo 4</span></div>
+        <div class="photo-placeholder"><span>Photo 5</span></div>
+        <div class="photo-placeholder"><span>Photo 6</span></div>
+      </div>
+      <p style="font-size:12px;color:var(--text-light);margin-top:8px;font-style:italic">Remplacez les espaces ci-dessus par vos photos en modifiant le HTML (balises &lt;img&gt;)</p>
+
+      <div class="nav-trips">
+        <a href="voyage-2023.html" class="nav-trip-link">
+          <div class="nav-trip-dir">← Voyage précédent</div>
+          <div class="nav-trip-name">Londres 2023</div>
+        </a>
+        <a href="avenir.html" class="nav-trip-link" style="text-align:right">
+          <div class="nav-trip-dir">Prochain voyage →</div>
+          <div class="nav-trip-name">Londres 2025</div>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-card">
+        <div class="sidebar-title">Infos pratiques</div>
+        <div class="info-row"><span class="info-key">Dates</span><span class="info-val">Avril 2024</span></div>
+        <div class="info-row"><span class="info-key">Durée</span><span class="info-val">4 jours · 3 nuits</span></div>
+        <div class="info-row"><span class="info-key">Saison</span><span class="info-val">Printemps</span></div>
+        <div class="info-row"><span class="info-key">Transport</span><span class="info-val">Eurostar</span></div>
+        <div class="info-row"><span class="info-key">Hôtel</span><span class="info-val">London Bridge area</span></div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">Coups de cœur</div>
+        <ul class="spot-list">
+          <li><span class="spot-dot"></span>Tate Modern Viewing Level au coucher du soleil</li>
+          <li><span class="spot-dot"></span>Déjeuner chez Dishoom Shoreditch</li>
+          <li><span class="spot-dot"></span>Brick Lane le dimanche matin</li>
+          <li><span class="spot-dot"></span>Mercato Metropolitano près de Borough</li>
+          <li><span class="spot-dot"></span>Balade sur le High Line de Peckham</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">À retenir</div>
+        <ul class="spot-list">
+          <li><span class="spot-dot"></span>Borough Market fermé le lundi</li>
+          <li><span class="spot-dot"></span>Columbia Road Market uniquement le dimanche matin</li>
+          <li><span class="spot-dot"></span>Tate Modern : entrée gratuite, expo temporaire payante</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Tea<span>For</span>Three</div>
+    <div class="footer-tagline">Trois voyageurs, une ville, une tradition</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="voyages.html">Voyages</a></li>
+      <li><a href="incontournables.html">Incontournables</a></li>
+      <li><a href="carnet.html">Carnet</a></li>
+      <li><a href="avenir.html">À venir</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

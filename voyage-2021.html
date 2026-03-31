@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voyage 2021 — TeaForThree</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .trip-body-grid{display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:start}
+    .prose p{font-size:15px;line-height:1.8;color:var(--text-mid);margin-bottom:1.2rem}
+    .prose h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin:2rem 0 0.6rem}
+    .sidebar-card{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.4rem;margin-bottom:14px}
+    .sidebar-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:0.5px solid var(--border)}
+    .info-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:0.5px solid var(--border);font-size:13px}
+    .info-row:last-child{border-bottom:none}
+    .info-key{color:var(--text-light)}
+    .spot-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+    .spot-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-mid)}
+    .spot-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px}
+    .nav-trips{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:0.5px solid var(--border)}
+    .nav-trip-link{text-decoration:none;color:inherit}
+    .nav-trip-dir{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px}
+    .nav-trip-name{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold)}
+    @media(max-width:700px){.trip-body-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Tea<span>For</span>Three</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="voyages.html" class="active">Nos voyages</a></li>
+    <li><a href="incontournables.html">Incontournables</a></li>
+    <li><a href="carnet.html">Carnet de route</a></li>
+    <li><a href="avenir.html">À venir</a></li>
+  </ul>
+  <span class="nav-tea">London, every year</span>
+</nav>
+
+<div class="hero" style="min-height:320px;background:linear-gradient(145deg,#1a1030 0%,#442870 55%,#8060b0 100%)">
+  <div class="hero-pattern"></div>
+  <div class="hero-filigrane">2021</div>
+  <div class="hero-content">
+    <div class="hero-tag">Automne · Voyage n°2</div>
+    <h1>Londres <em>2021</em></h1>
+    <div class="divider"></div>
+    <p class="hero-sub">Le retour tant attendu — City, South Bank &amp; Covent Garden</p>
+  </div>
+</div>
+
+<div class="page">
+  <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:2rem;margin-bottom:2rem">
+    <span class="badge gold">Automne 2021</span>
+    <span class="badge">3 jours · 2 nuits</span>
+    <span class="badge">Centre</span>
+    <a href="voyages.html" style="margin-left:auto;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none">← Tous les voyages</a>
+  </div>
+
+  <div class="trip-body-grid">
+    <div>
+      <div class="prose">
+        <p>Après la parenthèse de 2020, ce retour à Londres avait une saveur toute particulière. La ville respirait à nouveau, les pubs étaient ouverts, les rues animées. Retrouver cette énergie londonienne qu'on avait tant manquée — c'était une émotion difficile à décrire.</p>
+        <p>On a choisi de rester dans les quartiers du centre et du South Bank, pour retrouver nos repères avant d'explorer plus loin les prochaines fois. La City à l'aube, quasi déserte, était un spectacle fascinant.</p>
+        <h3>Le moment inoubliable</h3>
+        <p>Un dîner au bord de la Tamise, vue sur Tower Bridge illuminé. Le sentiment de retrouver une vieille amie. Ce voyage nous a confirmé que cette tradition familiale allait durer longtemps.</p>
+      </div>
+
+      <div class="nav-trips">
+        <a href="voyage-2019.html" class="nav-trip-link"><div class="nav-trip-dir">← Voyage précédent</div><div class="nav-trip-name">Londres 2019</div></a>
+        <a href="voyage-2022.html" class="nav-trip-link" style="text-align:right"><div class="nav-trip-dir">Voyage suivant →</div><div class="nav-trip-name">Londres 2022</div></a>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-card">
+        <div class="sidebar-title">Infos pratiques</div>
+        <div class="info-row"><span class="info-key">Dates</span><span>Octobre 2021</span></div>
+        <div class="info-row"><span class="info-key">Durée</span><span>3 jours · 2 nuits</span></div>
+        <div class="info-row"><span class="info-key">Saison</span><span>Automne</span></div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-title">Coups de cœur</div>
+        <ul class="spot-list">
+          <li><span class="spot-dot"></span>La City à l'aube</li>
+          <li><span class="spot-dot"></span>Tower Bridge illuminé le soir</li>
+          <li><span class="spot-dot"></span>Covent Garden animé</li>
+          <li><span class="spot-dot"></span>Premier pub pint retrouvé !</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Tea<span>For</span>Three</div>
+    <div class="footer-tagline">Trois voyageurs, une ville, une tradition</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Accueil</a></li><li><a href="voyages.html">Voyages</a></li>
+      <li><a href="incontournables.html">Incontournables</a></li><li><a href="carnet.html">Carnet</a></li><li><a href="avenir.html">À venir</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
