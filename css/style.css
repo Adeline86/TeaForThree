@@ -25,6 +25,7 @@
 html{scroll-behavior:smooth}
 
 body {
+  overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   background: var(--cream);
@@ -210,13 +211,13 @@ footer {
 .nav-burger.open span:nth-child(3){ transform: translateY(-6.5px) rotate(-45deg); }
 
 /* ── TABLET 768–960px ── */
-@media(max-width:960px){
+@media(max-width:1200px){
   .nav-tea { display: none; }
   .nav-links a { padding: 0 9px; font-size: 10px; }
 }
 
 /* ── MOBILE max 768px: hamburger ── */
-@media(max-width:768px){
+@media(max-width:1024px){
   nav {
     padding: 0 1.25rem;
     height: 56px;
