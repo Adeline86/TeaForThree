@@ -8,9 +8,7 @@
   <style>
     .next-hero-detail{margin-top:1.5rem;display:flex;gap:10px;flex-wrap:wrap}
     .next-pill{font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid rgba(212,169,106,0.5);color:var(--gold-light);background:rgba(181,118,58,0.1)}
-
     .wishlist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-
     .wish-card{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);overflow:hidden}
     .wish-card-thumb{height:120px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
     .wt-hackney{background:linear-gradient(145deg,#181028,#3a2060)}
@@ -21,30 +19,25 @@
     .wt-peckham{background:linear-gradient(145deg,#200808,#602020)}
     .wt-highgate{background:linear-gradient(145deg,#101018,#303048)}
     .wt-richmond{background:linear-gradient(145deg,#101808,#304828)}
-
     .wish-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.03) 0,rgba(255,255,255,0.03) 1px,transparent 0,transparent 50%);background-size:10px 10px}
     .wish-thumb-label{position:relative;z-index:1;font-family:'Playfair Display',serif;font-size:13px;color:rgba(255,255,255,0.55);letter-spacing:0.06em}
-
     .wish-body{padding:12px 14px 14px}
     .wish-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:5px}
     .wish-desc{font-size:12.5px;color:var(--text-light);line-height:1.5;margin-bottom:10px}
     .wish-tags{display:flex;gap:5px;flex-wrap:wrap}
-
     .status-row{display:flex;gap:10px;margin-bottom:2.5rem;flex-wrap:wrap}
     .status-card{flex:1;min-width:180px;background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.4rem}
     .status-icon{font-size:22px;margin-bottom:8px;display:block}
     .status-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:4px}
     .status-val{font-size:12.5px;color:var(--text-light);line-height:1.45}
-
     .ideas-note{background:var(--gold-pale);border:0.5px solid var(--border-strong);border-radius:var(--radius);padding:1.4rem 1.6rem;margin-top:2rem}
     .ideas-note-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:6px}
     .ideas-note-text{font-size:13px;color:var(--text-mid);line-height:1.6}
-
-    @media(max-width:1024px){
+    @media(max-width:768px){
       .status-row{flex-direction:column}
+      .status-card{min-width:100%}
       .wishlist-grid{grid-template-columns:1fr}
-      .next-hero-detail{flex-wrap:wrap;gap:6px}
-      .next-pill{font-size:11px;padding:5px 10px}
+      .next-pill{font-size:11px;padding:4px 10px}
     }
   </style>
 </head>

@@ -16,13 +16,11 @@
     .trip-visual-2023{background:linear-gradient(145deg,#2a1208 0%,#6b3010 55%,#b06030 100%)}
     .trip-visual-2022{background:linear-gradient(145deg,#0e2010 0%,#286030 55%,#5aa050 100%)}
     .trip-visual-2021{background:linear-gradient(145deg,#1a1030 0%,#442870 55%,#8060b0 100%)}
-    .trip-visual-2025{background:linear-gradient(145deg,#1a1030 0%,#442870 55%,#8060b0 100%)}
-    .trip-visual-2020{background:linear-gradient(145deg,#101818 0%,#2a5050 55%,#507878 100%)}
     .trip-visual-2019{background:linear-gradient(145deg,#181008 0%,#503018 55%,#a07040 100%)}
+    .trip-visual-2025{background:linear-gradient(145deg,#1a1030 0%,#442870 55%,#8060b0 100%)}
     .trip-vpattern{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.03) 0,rgba(255,255,255,0.03) 1px,transparent 0,transparent 50%);background-size:10px 10px}
     .trip-vyear{position:absolute;bottom:-6px;right:10px;font-family:'Playfair Display',serif;font-size:76px;font-weight:400;color:rgba(255,255,255,0.1);line-height:1;user-select:none}
     .trip-vseason{position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.45)}
-
     .trip-info{padding:1.4rem 1.75rem;display:flex;flex-direction:column;justify-content:center;gap:8px}
     .trip-info-top{display:flex;align-items:baseline;gap:1rem}
     .trip-info-year{font-family:'Playfair Display',serif;font-size:22px;font-weight:400}
@@ -30,13 +28,12 @@
     .trip-info-headline{font-size:14px;color:var(--text-mid);line-height:1.55;max-width:500px}
     .trip-info-meta{display:flex;gap:8px;flex-wrap:wrap}
     .trip-info-link{margin-top:4px}
-
-    @media(max-width:1024px){
+    @media(max-width:768px){
       .trip-row{grid-template-columns:1fr}
       .trip-visual{height:150px}
-      .trip-info{padding:1rem 1.25rem}
-      .trip-info-year{font-size:20px}
-      .trip-info-link{margin-top:8px}
+      .trip-info{padding:1rem 1rem}
+      .trip-info-year{font-size:18px}
+      .trip-info-headline{font-size:13px}
     }
   </style>
 </head>

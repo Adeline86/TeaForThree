@@ -9,12 +9,10 @@
     .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem}
     .filter-btn{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;padding:6px 14px;border-radius:20px;border:0.5px solid var(--border-strong);color:var(--text-light);background:transparent;cursor:pointer;transition:all 0.2s;font-family:'Lato',sans-serif}
     .filter-btn:hover,.filter-btn.on{background:var(--gold);border-color:var(--gold);color:var(--white)}
-
     .spots-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
     .spot-card{cursor:pointer}
     .spot-card-inner{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:box-shadow 0.25s,transform 0.25s,border-color 0.25s;height:100%}
     .spot-card-inner:hover{box-shadow:var(--shadow-hover);border-color:var(--border-strong);transform:translateY(-2px)}
-
     .spot-header{height:90px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
     .spot-icon{font-family:'Playfair Display',serif;font-size:38px;font-weight:400;opacity:0.9;line-height:1;position:relative;z-index:1}
     .spot-header-resto{background:linear-gradient(135deg,#2a1208,#6b3010)}
@@ -23,7 +21,6 @@
     .spot-header-marche{background:linear-gradient(135deg,#181008,#503018)}
     .spot-header-balade{background:linear-gradient(135deg,#1a1030,#442870)}
     .spot-header-tea{background:linear-gradient(135deg,#2C1810,#6B3A1F)}
-
     .spot-body{padding:14px 16px 16px}
     .spot-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:4px}
     .spot-cat{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
@@ -31,11 +28,8 @@
     .spot-footer{display:flex;align-items:center;justify-content:space-between}
     .spot-stars{color:var(--gold);font-size:12px;letter-spacing:2px}
     .spot-year{font-size:10px;color:var(--text-light)}
-
-    @media(max-width:1024px){
+    @media(max-width:768px){
       .spots-grid{grid-template-columns:1fr}
-      .spot-header{height:80px}
-      .filter-bar{gap:6px}
       .filter-btn{font-size:10px;padding:5px 10px}
     }
   </style>

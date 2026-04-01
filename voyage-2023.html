@@ -24,19 +24,17 @@
     .spot-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-mid);line-height:1.45}
     .spot-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px}
     .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:1.5rem}
-    .photo-placeholder{border-radius:var(--radius-sm);height:100px;display:flex;align-items:center;justify-content:center;border:0.5px dashed var(--border-strong);background:var(--cream-dark)}
+    .photo-placeholder{border-radius:var(--radius-sm);overflow:hidden;height:100px;display:flex;align-items:center;justify-content:center;border:0.5px dashed var(--border-strong);background:var(--cream-dark)}
     .photo-placeholder span{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light)}
     .nav-trips{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:0.5px solid var(--border)}
     .nav-trip-link{text-decoration:none;color:inherit}
     .nav-trip-dir{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px}
     .nav-trip-name{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold)}
-    @media(max-width:1024px){
+    @media(max-width:768px){
       .trip-body-grid{grid-template-columns:1fr}
       .photo-grid{grid-template-columns:repeat(2,1fr)}
       .day-item{padding:8px 0}
       .nav-trips{flex-direction:column;gap:0.75rem}
-      .sidebar-card{margin-top:0}
-      .prose p{font-size:14px}
     }
   </style>
 </head>
