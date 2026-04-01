@@ -43,10 +43,13 @@
 
     .full-width{grid-column:1 / -1}
 
-    @media(max-width:768px){
+    @media(max-width:1024px){
       .carnet-grid{grid-template-columns:1fr}
       .weather-grid{grid-template-columns:repeat(2,1fr)}
       .full-width{grid-column:1}
+      .budget-val{font-size:14px}
+      .carnet-card-header{padding:0.9rem 1.2rem}
+      .status-row{flex-direction:column}
     }
   </style>
 </head>
