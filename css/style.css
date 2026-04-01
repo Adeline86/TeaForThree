@@ -216,8 +216,10 @@ footer {
   .nav-links a { padding: 0 9px; font-size: 10px; }
 }
 
-/* ── MOBILE max 768px: hamburger ── */
+/* ── MOBILE max 1024px: hamburger + full layout adaptation ── */
 @media(max-width:1024px){
+
+  /* ── NAV ── */
   nav {
     padding: 0 1.25rem;
     height: 56px;
@@ -225,8 +227,6 @@ footer {
   }
   .nav-burger { display: flex; }
   .nav-tea { display: none; }
-
-  /* collapse links — use !important to override the base flex display */
   .nav-links {
     display: none !important;
     position: fixed;
@@ -245,33 +245,43 @@ footer {
   .nav-links a {
     display: block !important;
     line-height: 1 !important;
-    padding: 15px 1.5rem !important;
-    font-size: 12px !important;
-    letter-spacing: 0.12em;
+    padding: 16px 1.5rem !important;
+    font-size: 13px !important;
+    letter-spacing: 0.1em;
     border-bottom: none !important;
     color: var(--text-mid);
   }
   .nav-links a.active { color: var(--gold); background: rgba(181,118,58,0.05); }
 
+  /* ── BODY offset for fixed nav ── */
   body { padding-top: 56px; }
 
-  .hero { padding: 2rem 1.25rem 2rem; min-height: 240px; }
-  .hero-filigrane { font-size: 80px; bottom: -0.5rem; }
-  .hero h1 { font-size: 28px; margin-bottom: 10px; }
-  .hero-sub { font-size: 13px; }
-  .divider { margin: 0.8rem 0; }
+  /* ── HERO ── */
+  .hero { padding: 2rem 1.25rem 2rem; min-height: 220px; }
+  .hero-filigrane { font-size: 80px; bottom: -0.5rem; right: 0; }
+  .hero h1 { font-size: 30px; margin-bottom: 10px; }
+  .hero-tag { font-size: 10px; letter-spacing: 0.12em; }
+  .hero-sub { font-size: 13.5px; line-height: 1.6; max-width: 100%; }
+  .divider { margin: 0.8rem 0; width: 36px; }
 
+  /* ── PAGE LAYOUT ── */
   .page { padding: 0 1.25rem 3rem; }
-
   .section-header { padding: 1.8rem 0 0.9rem; }
-  .section-title { font-size: 20px; }
-  .section-link { font-size: 10px; }
+  .section-title { font-size: 22px; }
+  .section-link { font-size: 10px; letter-spacing: 0.08em; }
 
-  .quote-band { margin: 2rem -1.25rem 0; padding: 2rem 1.25rem; }
-  .quote-text { font-size: 16px; }
+  /* ── CARDS ── */
+  .card:hover { transform: none; }
 
+  /* ── QUOTE ── */
+  .quote-band { margin: 2rem -1.25rem 0; padding: 2rem 1.5rem; }
+  .quote-text { font-size: 17px; }
+
+  /* ── FOOTER ── */
   footer { padding: 2rem 1.25rem 1.5rem; margin-top: 3rem; }
-  .footer-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-  .footer-links { flex-wrap: wrap; gap: 12px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+  .footer-logo { font-size: 16px; }
+  .footer-links { flex-wrap: wrap; gap: 10px 16px; }
+  .footer-links a { font-size: 10px; }
   .footer-tagline { display: none; }
 }
