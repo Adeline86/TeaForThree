@@ -36,7 +36,8 @@
     @media(max-width:640px){
       .highlights{grid-template-columns:repeat(3,minmax(0,1fr))}
       .trips-grid{grid-template-columns:1fr}
-      .next-strip{flex-direction:column;align-items:flex-start}
+      .next-strip{flex-direction:column;align-items:flex-start;gap:1rem}
+      .trip-thumb{height:130px}
     }
   </style>
 </head>
@@ -51,6 +52,9 @@
     <li><a href="carnet.html">Carnet de route</a></li>
     <li><a href="avenir.html">À venir</a></li>
   </ul>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
   <span class="nav-tea">London, every year</span>
 </nav>
 
@@ -155,5 +159,20 @@
   </div>
 </footer>
 
+<script>
+var burger=document.getElementById('burger');
+var navLinks=document.querySelector('.nav-links');
+burger.addEventListener('click',function(){
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+// close menu on link click
+navLinks.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){
+    burger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>
