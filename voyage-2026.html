@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voyage 2026 — TeaForThree</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .trip-body-grid{display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:start}
+    .prose p{font-size:15px;line-height:1.8;color:var(--text-mid);margin-bottom:1.2rem}
+    .prose h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin:2rem 0 0.6rem;color:var(--text-dark)}
+    .day-list{display:flex;flex-direction:column;gap:0}
+    .day-item{padding:10px 0;border-bottom:0.5px solid var(--border)}
+    .day-item:last-child{border-bottom:none}
+    .day-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+    .day-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;margin-bottom:4px}
+    .day-desc{font-size:12.5px;color:var(--text-light);line-height:1.5}
+    .day-stops{list-style:none;margin-top:6px;display:flex;flex-direction:column;gap:4px}
+    .day-stops li{display:flex;align-items:flex-start;gap:7px;font-size:12px;color:var(--text-light);line-height:1.4}
+    .stop-dot{width:4px;height:4px;border-radius:50%;background:var(--gold-light);flex-shrink:0;margin-top:5px}
+    .planning-badge{display:inline-block;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;border-radius:20px;background:rgba(181,118,58,0.12);border:0.5px solid var(--gold-light);color:var(--brown-mid);margin-bottom:1rem}
+    .sidebar-card{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.4rem;margin-bottom:14px}
+    .sidebar-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:0.5px solid var(--border)}
+    .info-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:0.5px solid var(--border);font-size:13px}
+    .info-row:last-child{border-bottom:none}
+    .info-key{color:var(--text-light)}
+    .spot-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+    .spot-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-mid);line-height:1.45}
+    .spot-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px}
+    .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:1.5rem}
+    .photo-placeholder{border-radius:var(--radius-sm);height:100px;display:flex;align-items:center;justify-content:center;border:0.5px dashed var(--border-strong);background:var(--cream-dark)}
+    .photo-placeholder span{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light)}
+    .nav-trips{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:0.5px solid var(--border)}
+    .nav-trip-link{text-decoration:none;color:inherit}
+    .nav-trip-dir{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px}
+    .nav-trip-name{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold)}
+    @media(max-width:768px){
+      .trip-body-grid{grid-template-columns:1fr}
+      .photo-grid{grid-template-columns:repeat(2,1fr)}
+      .day-item{padding:8px 0}
+      .nav-trips{flex-direction:column;gap:0.75rem}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Tea<span>For</span>Three</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="voyages.html" class="active">Nos voyages</a></li>
+    <li><a href="incontournables.html">Incontournables</a></li>
+    <li><a href="carnet.html">Carnet de route</a></li>
+    <li><a href="avenir.html">À venir</a></li>
+  </ul>
+  <span class="nav-tea">London, every year</span>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="hero" style="min-height:320px;background:linear-gradient(145deg,#0a1820 0%,#1a4050 50%,#3a7080 100%)">
+  <div class="hero-pattern"></div>
+  <div class="hero-filigrane">2026</div>
+  <div class="hero-content">
+    <div class="hero-tag">Printemps · Voyage n°7 · Programme prévu</div>
+    <h1>Londres <em>2026</em></h1>
+    <div class="divider"></div>
+    <p class="hero-sub">Kew Gardens, Cambridge, Hampstead &amp; Greenwich — 4 jours, 9–12 avril</p>
+  </div>
+</div>
+
+<div class="page">
+  <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:2rem;margin-bottom:2rem">
+    <span class="badge gold">9–12 avril 2026</span>
+    <span class="badge">4 jours · 3 nuits</span>
+    <span class="badge">Printemps</span>
+    <span class="badge">Programme prévu</span>
+    <a href="voyages.html" style="margin-left:auto;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none">← Tous les voyages</a>
+  </div>
+
+  <div class="trip-body-grid">
+    <div>
+
+      <div class="prose">
+        <p>Le voyage 2026 s'annonce varié et ambitieux : une journée bucolique à Kew Gardens, une escapade à Cambridge, une balade sur Hampstead Heath et une exploration approfondie de Greenwich. Quatre ambiances très différentes en quatre jours.</p>
+        <p>Cette page sera complétée avec le récit, les anecdotes et les photos après le voyage. En attendant, voici le programme prévu !</p>
+      </div>
+
+      <h3 style="font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin:2rem 0 1rem;color:var(--text-dark)">Le programme jour par jour</h3>
+
+      <div class="day-list">
+
+        <div class="day-item">
+          <div class="day-label">Jour 1 · Jeudi 9 avril</div>
+          <div class="day-title">Kew Gardens</div>
+          <div class="day-desc">Journée dans les jardins botaniques royaux de Kew — au printemps, c'est le moment idéal.</div>
+          <ul class="day-stops">
+            <li><span class="stop-dot"></span>Victoria Plaza Café — café à l'entrée Victoria Gate</li>
+            <li><span class="stop-dot"></span>Palm House — la grande serre tropicale victorienne</li>
+            <li><span class="stop-dot"></span>Temperate House — la plus grande serre victorienne du monde</li>
+            <li><span class="stop-dot"></span>Treetop Walkway — passerelle dans les cimes des arbres</li>
+            <li><span class="stop-dot"></span>Lake and Crossing — le lac aux canards et aux oies</li>
+            <li><span class="stop-dot"></span>Kew Palace — le palais royal (à vérifier : fermé temporairement)</li>
+            <li><span class="stop-dot"></span>Princess of Wales Conservatory — 10 zones climatiques</li>
+          </ul>
+        </div>
+
+        <div class="day-item">
+          <div class="day-label">Jour 2 · Vendredi 10 avril</div>
+          <div class="day-title">Escapade à Cambridge</div>
+          <div class="day-desc">Train depuis King's Cross, 56 min. Une journée dans la ville des colleges et de la Cam.</div>
+          <ul class="day-stops">
+            <li><span class="stop-dot"></span>King's Cross — départ en train</li>
+            <li><span class="stop-dot"></span>King's College Chapel — chef-d'œuvre gothique</li>
+            <li><span class="stop-dot"></span>Clare College — le plus ancien college encore en activité (fondé en 1326)</li>
+            <li><span class="stop-dot"></span>The Backs — jardins en bord de Cam, vue imprenable</li>
+            <li><span class="stop-dot"></span>Scholars Punting — balade en punt sur la Cam</li>
+            <li><span class="stop-dot"></span>Jesus Green — grand parc au nord du centre</li>
+            <li><span class="stop-dot"></span>The Round Church — église romane du XIIe siècle</li>
+            <li><span class="stop-dot"></span>St John's College — le "Bridge of Sighs" de Cambridge</li>
+            <li><span class="stop-dot"></span>Trinity College — la plus grande cour de Cambridge</li>
+          </ul>
+        </div>
+
+        <div class="day-item">
+          <div class="day-label">Jour 3 · Samedi 11 avril</div>
+          <div class="day-title">Hampstead Village &amp; Heath</div>
+          <div class="day-desc">Un samedi à Hampstead — le village chic du nord de Londres et ses grands espaces verts.</div>
+          <ul class="day-stops">
+            <li><span class="stop-dot"></span>The Flask — gastropub historique à Hampstead Village</li>
+            <li><span class="stop-dot"></span>Church Row — rue géorgienne emblématique</li>
+            <li><span class="stop-dot"></span>Holly Bush Hill — montée vers la Heath</li>
+            <li><span class="stop-dot"></span>Hampstead Heath — vaste parc sauvage avec vues sur Londres</li>
+            <li><span class="stop-dot"></span>Parliament Hill — panorama 360° sur la skyline londonienne</li>
+            <li><span class="stop-dot"></span>Daunt Books — la librairie de voyages la plus belle de Londres</li>
+            <li><span class="stop-dot"></span>Shepherd's Bush Empire — concert ou soirée (à confirmer)</li>
+          </ul>
+        </div>
+
+        <div class="day-item">
+          <div class="day-label">Jour 4 · Dimanche 12 avril</div>
+          <div class="day-title">Greenwich &amp; retour</div>
+          <div class="day-desc">Matinée à Greenwich avant l'Eurostar du retour. Le méridien zéro, la Tamise et le Cutty Sark.</div>
+          <ul class="day-stops">
+            <li><span class="stop-dot"></span>Observatoire Royal de Greenwich — méridien zéro</li>
+            <li><span class="stop-dot"></span>One Tree Hill Vista Point — vue sur les Docklands</li>
+            <li><span class="stop-dot"></span>Turnpin Lane — ruelle médiévale pavée</li>
+            <li><span class="stop-dot"></span>Greenwich Market — marché artisanal couvert</li>
+            <li><span class="stop-dot"></span>Old Royal Naval College — baroque au bord de la Tamise</li>
+            <li><span class="stop-dot"></span>Painted Hall — la "Chapelle Sixtine de l'Angleterre"</li>
+            <li><span class="stop-dot"></span>Chapel of St Peter and St Paul</li>
+            <li><span class="stop-dot"></span>Trafalgar Tavern — pub victorien au bord de la Tamise</li>
+            <li><span class="stop-dot"></span>Cutty Sark — le clipper de thé victorien</li>
+            <li><span class="stop-dot"></span>Greenwich Foot Tunnel — traversée piétonne sous la Tamise</li>
+            <li><span class="stop-dot"></span>Eurostar du retour</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <h3 style="font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin:2rem 0 1rem;color:var(--text-dark)">Photos du voyage</h3>
+      <div class="photo-grid">
+        <div class="photo-placeholder"><span>Photo 1</span></div>
+        <div class="photo-placeholder"><span>Photo 2</span></div>
+        <div class="photo-placeholder"><span>Photo 3</span></div>
+        <div class="photo-placeholder"><span>Photo 4</span></div>
+        <div class="photo-placeholder"><span>Photo 5</span></div>
+        <div class="photo-placeholder"><span>Photo 6</span></div>
+      </div>
+      <p style="font-size:12px;color:var(--text-light);margin-top:8px;font-style:italic">À remplir après le voyage avec vos photos !</p>
+
+      <div class="nav-trips">
+        <a href="voyage-2025.html" class="nav-trip-link">
+          <div class="nav-trip-dir">← Voyage précédent</div>
+          <div class="nav-trip-name">Londres 2025</div>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-card">
+        <div class="sidebar-title">Infos pratiques</div>
+        <div class="info-row"><span class="info-key">Dates</span><span>9–12 avril 2026</span></div>
+        <div class="info-row"><span class="info-key">Durée</span><span>4 jours · 3 nuits</span></div>
+        <div class="info-row"><span class="info-key">Saison</span><span>Printemps</span></div>
+        <div class="info-row"><span class="info-key">Transport</span><span>Eurostar</span></div>
+        <div class="info-row"><span class="info-key">Cambridge</span><span>Train depuis King's Cross</span></div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">Les highlights prévus</div>
+        <ul class="spot-list">
+          <li><span class="spot-dot"></span>Kew Gardens au printemps — les cerisiers en fleurs</li>
+          <li><span class="spot-dot"></span>Punt sur la Cam à Cambridge</li>
+          <li><span class="spot-dot"></span>Vue depuis Parliament Hill</li>
+          <li><span class="spot-dot"></span>Painted Hall à Greenwich</li>
+          <li><span class="spot-dot"></span>Cutty Sark &amp; le tunnel sous la Tamise</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">Notes &amp; rappels</div>
+        <ul class="spot-list">
+          <li><span class="spot-dot"></span>Kew Palace temporairement fermé — vérifier avant</li>
+          <li><span class="spot-dot"></span>Scholars Punting : réserver à l'avance</li>
+          <li><span class="spot-dot"></span>Borough Market ouvert le jeudi — caler si possible</li>
+          <li><span class="spot-dot"></span>Train Cambridge : prévoir billet à l'avance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Tea<span>For</span>Three</div>
+    <div class="footer-tagline">Trois voyageurs, une ville, une tradition</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="voyages.html">Voyages</a></li>
+      <li><a href="incontournables.html">Incontournables</a></li>
+      <li><a href="carnet.html">Carnet</a></li>
+      <li><a href="avenir.html">À venir</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+var burger=document.getElementById('burger');
+var navLinks=document.querySelector('.nav-links');
+burger.addEventListener('click',function(){
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){
+    burger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
