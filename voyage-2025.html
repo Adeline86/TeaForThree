@@ -9,21 +9,24 @@
     .prose p{font-size:17px;line-height:1.8;color:var(--text-mid);margin-bottom:1.2rem}
     .prose h3{font-family:'Playfair Display',serif;font-size:21px;font-weight:400;margin:2rem 0 0.6rem;color:var(--text-dark)}
     .day-list{display:flex;flex-direction:column;gap:0}
-    .day-item{padding:9px 0;border-bottom:0.5px solid var(--border)}
+    .day-item{padding:10px 0;border-bottom:0.5px solid var(--border)}
     .day-item:last-child{border-bottom:none}
     .day-label{font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
-    .day-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;margin-bottom:2px}
-    .day-desc{font-size:17px;color:var(--text-light);line-height:1.5}
+    .day-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;margin-bottom:4px}
+    .day-desc{font-size:15px;color:var(--text-light);line-height:1.5}
+    .day-stops{list-style:none;margin-top:6px;display:flex;flex-direction:column;gap:4px}
+    .day-stops li{display:flex;align-items:flex-start;gap:7px;font-size:15px;color:var(--text-light);line-height:1.4}
+    .stop-dot{width:4px;height:4px;border-radius:50%;background:var(--gold-light);flex-shrink:0;margin-top:7px}
     .sidebar-card{background:var(--white);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.4rem;margin-bottom:14px}
     .sidebar-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:0.5px solid var(--border)}
     .info-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:0.5px solid var(--border);font-size:15px}
     .info-row:last-child{border-bottom:none}
     .info-key{color:var(--text-light)}
     .spot-list{list-style:none;display:flex;flex-direction:column;gap:5px}
-    .spot-list li{display:flex;align-items:flex-start;gap:8px;font-size:17px;color:var(--text-mid);line-height:1.45}
+    .spot-list li{display:flex;align-items:flex-start;gap:8px;font-size:15px;color:var(--text-mid);line-height:1.45}
     .spot-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px}
     .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:1.5rem}
-    .photo-placeholder{border-radius:var(--radius-sm);overflow:hidden;height:100px;display:flex;align-items:center;justify-content:center;border:0.5px dashed var(--border-strong);background:var(--cream-dark)}
+    .photo-placeholder{border-radius:var(--radius-sm);height:100px;display:flex;align-items:center;justify-content:center;border:0.5px dashed var(--border-strong);background:var(--cream-dark)}
     .photo-placeholder span{font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light)}
     .nav-trips{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:0.5px solid var(--border)}
     .nav-trip-link{text-decoration:none;color:inherit}
@@ -57,43 +60,97 @@
   <div class="hero-pattern"></div>
   <div class="hero-filigrane">2025</div>
   <div class="hero-content">
-    <div class="hero-tag">Voyage n°6 · À compléter</div>
+    <div class="hero-tag">Hiver · Voyage n°6 · 30 jan – 2 fév</div>
     <h1>Londres <em>2025</em></h1>
     <div class="divider"></div>
-    <p class="hero-sub">À compléter avec le récit de votre voyage</p>
+    <p class="hero-sub">Westminster, St John's Wood, Hampstead, Sky Garden &amp; Battersea</p>
   </div>
 </div>
 
 <div class="page">
   <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:2rem;margin-bottom:2rem">
-    <span class="badge gold">2025</span>
-    <span class="badge">À compléter</span>
+    <span class="badge gold">30 jan – 2 fév 2025</span>
+    <span class="badge">4 jours · 3 nuits</span>
+    <span class="badge">Hiver</span>
+    <span class="badge">St John's Wood</span>
     <a href="voyages.html" style="margin-left:auto;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none">← Tous les voyages</a>
-  </div>
-
-  <div class="todo-banner">
-    <strong>Cette page est à compléter après votre voyage 2025 !</strong>
-    Remplacez les textes entre les balises par votre récit, vos coups de cœur, et ajoutez vos photos dans la grille ci-dessous.
   </div>
 
   <div class="trip-body-grid">
     <div>
+
       <div class="prose">
-        <p><!-- Remplacez ce texte par le récit de votre voyage 2025. Racontez l'ambiance, les découvertes, les surprises... --></p>
-        <p><!-- Deuxième paragraphe : une anecdote ou un moment particulier --></p>
-        <h3>Le moment inoubliable</h3>
-        <p><!-- Quel a été le moment fort de ce voyage ? --></p>
+        <p><!-- Ajoutez ici le récit de votre voyage une fois rentré ! --></p>
       </div>
 
-      <h3 style="font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin:2rem 0 1rem;color:var(--text-dark)">Le programme jour par jour</h3>
+      <h3 style="font-family:'Playfair Display',serif;font-size:21px;font-weight:400;margin:1rem 0 1rem;color:var(--text-dark)">Le programme jour par jour</h3>
+
       <div class="day-list">
-        <div class="day-item"><div class="day-label">Jour 1</div><div class="day-title">À compléter</div><div class="day-desc">Décrivez votre première journée.</div></div>
-        <div class="day-item"><div class="day-label">Jour 2</div><div class="day-title">À compléter</div><div class="day-desc">Décrivez votre deuxième journée.</div></div>
-        <div class="day-item"><div class="day-label">Jour 3</div><div class="day-title">À compléter</div><div class="day-desc">Décrivez votre troisième journée.</div></div>
-        <div class="day-item"><div class="day-label">Jour 4</div><div class="day-title">Retour</div><div class="day-desc">Dernière matinée et Eurostar du retour.</div></div>
+
+        <div class="day-item">
+          <div class="day-label">Jour 1 · Jeudi 30 janvier</div>
+          <div class="day-title">Arrivée, St John's Wood &amp; Westminster</div>
+          <div class="day-desc">Eurostar 9h12 – 10h30. Installation à Queens Grove Court, puis exploration du centre.</div>
+          <ul class="day-stops">
+            <li><span class="stop-dot"></span>Gare du Nord → St Pancras International (9h12–10h30)</li>
+            <li><span class="stop-dot"></span>The Ivy St. John's Wood — déjeuner</li>
+            <li><span class="stop-dot"></span>Queens Grove Court — hôtel</li>
+            <li><span class="stop-dot"></span>Big Ben</li>
+            <li><span class="stop-dot"></span>King Charles Street Arch</li>
+            <li><span class="stop-dot"></span>The Cenotaph — mémorial de guerre</li>
+            <li><span class="stop-dot"></span>10 Downing Street</li>
+            <li><span class="stop-dot"></span>Trafalgar Square</li>
+            <li><span class="stop-dot"></span>The LEGO® Store Leicester Square</li>
+            <li><span class="stop-dot"></span>Mr Bean Statue</li>
+            <li><span class="stop-dot"></span>Harry Potter Statue</li>
+            <li><span class="stop-dot"></span>Goodwin's Court — le Chemin de Traverse</li>
+            <li><span class="stop-dot"></span>Shaftesbury Ave</li>
+            <li><span class="stop-dot"></span>Outernet London</li>
+          </ul>
+        </div>
+
+        <div class="day-item">
+          <div class="day-label">Jour 2 · Vendredi 31 janvier</div>
+          <div class="day-title">South Kensington, Westminster &amp; Soho</div>
+          <div class="day-desc">Musées, cathédrale et galerie photo, avant un dîner chez Dishoom.</div>
+          <ul class="day-stops">
+            <li><span class="stop-dot"></span>Musée d'histoire naturelle de Londres</li>
+            <li><span class="stop-dot"></span>John Sandoe Books Ltd — librairie indépendante</li>
+            <li><span class="stop-dot"></span>Westminster Cathedral — campanile £6</li>
+            <li><span class="stop-dot"></span>The Lookout (17h15)</li>
+            <li><span class="stop-dot"></span>The Photographers' Gallery (17h–19h30)</li>
+            <li><span class="stop-dot"></span>Dishoom Carnaby — dîner</li>
+          </ul>
+        </div>
+
+        <div class="day-item">
+          <div class="day-label">Jour 3 · Samedi 1er février</div>
+          <div class="day-title">Hampstead, Sky Garden, Canary Wharf &amp; Battersea</div>
+          <div class="day-desc">Grande journée entre les hauteurs de Hampstead, le Sky Garden et les lumières de Canary Wharf.</div>
+          <ul class="day-stops">
+            <li><span class="stop-dot"></span>The Hill Garden and Pergola — jardins suspendus à Hampstead</li>
+            <li><span class="stop-dot"></span>Kenwood House — villa néoclassique sur la Heath</li>
+            <li><span class="stop-dot"></span>Sky Garden (17h00) — jardin suspendu au sommet du Walkie Talkie</li>
+            <li><span class="stop-dot"></span>Canary Wharf — Winter Lights 2025 (17h–22h)</li>
+            <li><span class="stop-dot"></span>Uber Boats — traversée de la Tamise</li>
+            <li><span class="stop-dot"></span>Battersea Power Station</li>
+            <li><span class="stop-dot"></span>Dishoom Battersea — dîner</li>
+          </ul>
+        </div>
+
+        <div class="day-item">
+          <div class="day-label">Jour 4 · Dimanche 2 février</div>
+          <div class="day-title">Covent Garden &amp; retour</div>
+          <div class="day-desc">Déjeuner en famille avant l'Eurostar du soir.</div>
+          <ul class="day-stops">
+            <li><span class="stop-dot"></span>Caravan Covent Garden — déjeuner en famille</li>
+            <li><span class="stop-dot"></span>St Pancras International → Gare du Nord (20h01–23h18)</li>
+          </ul>
+        </div>
+
       </div>
 
-      <h3 style="font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin:2rem 0 1rem;color:var(--text-dark)">Photos du voyage</h3>
+      <h3 style="font-family:'Playfair Display',serif;font-size:21px;font-weight:400;margin:2rem 0 1rem;color:var(--text-dark)">Photos du voyage</h3>
       <div class="photo-grid">
         <div class="photo-placeholder"><span>Photo 1</span></div>
         <div class="photo-placeholder"><span>Photo 2</span></div>
@@ -102,29 +159,49 @@
         <div class="photo-placeholder"><span>Photo 5</span></div>
         <div class="photo-placeholder"><span>Photo 6</span></div>
       </div>
-      <p style="font-size:13.5px;color:var(--text-light);margin-top:8px;font-style:italic">Remplacez les espaces ci-dessus par vos photos : &lt;img src="photos/2025/photo1.jpg" style="width:100%;height:100px;object-fit:cover;border-radius:8px;" /&gt;</p>
+      <p style="font-size:13.5px;color:var(--text-light);margin-top:8px;font-style:italic">Remplacez les espaces ci-dessus par vos photos après le voyage.</p>
 
       <div class="nav-trips">
-        <a href="voyage-2024.html" class="nav-trip-link"><div class="nav-trip-dir">← Voyage précédent</div><div class="nav-trip-name">Londres 2024</div></a>
-        <a href="voyage-2026.html" class="nav-trip-link" style="text-align:right"><div class="nav-trip-dir">Voyage suivant →</div><div class="nav-trip-name">Londres 2026</div></a>
+        <a href="voyage-2024.html" class="nav-trip-link">
+          <div class="nav-trip-dir">← Voyage précédent</div>
+          <div class="nav-trip-name">Londres 2024</div>
+        </a>
+        <a href="voyage-2026.html" class="nav-trip-link" style="text-align:right">
+          <div class="nav-trip-dir">Voyage suivant →</div>
+          <div class="nav-trip-name">Londres 2026</div>
+        </a>
       </div>
     </div>
 
     <div>
       <div class="sidebar-card">
         <div class="sidebar-title">Infos pratiques</div>
-        <div class="info-row"><span class="info-key">Dates</span><span>À compléter</span></div>
-        <div class="info-row"><span class="info-key">Durée</span><span>À compléter</span></div>
-        <div class="info-row"><span class="info-key">Saison</span><span>À compléter</span></div>
+        <div class="info-row"><span class="info-key">Dates</span><span>30 jan – 2 fév 2025</span></div>
+        <div class="info-row"><span class="info-key">Durée</span><span>4 jours · 3 nuits</span></div>
+        <div class="info-row"><span class="info-key">Saison</span><span>Hiver</span></div>
         <div class="info-row"><span class="info-key">Transport</span><span>Eurostar</span></div>
-        <div class="info-row"><span class="info-key">Quartier</span><span>À compléter</span></div>
+        <div class="info-row"><span class="info-key">Hôtel</span><span>Queens Grove Court</span></div>
+        <div class="info-row"><span class="info-key">Quartier</span><span>St John's Wood</span></div>
       </div>
+
       <div class="sidebar-card">
-        <div class="sidebar-title">Coups de cœur</div>
+        <div class="sidebar-title">Les highlights</div>
         <ul class="spot-list">
-          <li><span class="spot-dot"></span>À compléter après le voyage</li>
-          <li><span class="spot-dot"></span>À compléter après le voyage</li>
-          <li><span class="spot-dot"></span>À compléter après le voyage</li>
+          <li><span class="spot-dot"></span>Goodwin's Court — le vrai Chemin de Traverse</li>
+          <li><span class="spot-dot"></span>Sky Garden au coucher du soleil</li>
+          <li><span class="spot-dot"></span>Canary Wharf Winter Lights</li>
+          <li><span class="stop-dot" style="width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px;display:inline-block"></span>Dishoom — deux fois !</li>
+          <li><span class="spot-dot"></span>Battersea Power Station</li>
+          <li><span class="spot-dot"></span>The Hill Garden & Pergola</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">Notes</div>
+        <ul class="spot-list">
+          <li><span class="spot-dot"></span>Westminster Cathedral campanile : £6, vues magnifiques</li>
+          <li><span class="spot-dot"></span>Sky Garden : réservation obligatoire à l'avance</li>
+          <li><span class="spot-dot"></span>Canary Wharf Winter Lights : gratuit, 17h–22h</li>
         </ul>
       </div>
     </div>
@@ -136,8 +213,11 @@
     <div class="footer-logo">Tea<span>For</span>Three</div>
     <div class="footer-tagline">Trois voyageurs, une ville, une tradition</div>
     <ul class="footer-links">
-      <li><a href="index.html">Accueil</a></li><li><a href="voyages.html">Voyages</a></li>
-      <li><a href="incontournables.html">Incontournables</a></li><li><a href="carnet.html">Carnet</a></li><li><a href="avenir.html">À venir</a></li>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="voyages.html">Voyages</a></li>
+      <li><a href="incontournables.html">Incontournables</a></li>
+      <li><a href="carnet.html">Carnet</a></li>
+      <li><a href="avenir.html">À venir</a></li>
     </ul>
   </div>
 </footer>
@@ -148,7 +228,6 @@ burger.addEventListener('click',function(){
   burger.classList.toggle('open');
   navLinks.classList.toggle('open');
 });
-// close menu on link click
 navLinks.querySelectorAll('a').forEach(function(a){
   a.addEventListener('click',function(){
     burger.classList.remove('open');
