@@ -94,6 +94,7 @@ nav {
   pointer-events: none; user-select: none; letter-spacing: -0.04em;
 }
 .hero-content { position: relative; z-index: 1; max-width: 1000px; width: 100%; margin: 0 auto; }
+.hero-home-inner { display: flex !important; flex-direction: row !important; align-items: center !important; gap: 3.5rem; }
 .hero-tag { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 10px; }
 .hero h1 {
   font-family: 'Playfair Display', serif;
@@ -276,9 +277,9 @@ footer {
   .hero { padding: 1.75rem 1rem 1.75rem; min-height: 200px; }
 
   .hero-home { min-height: auto; padding: 2rem 1rem 2.5rem; }
-  .hero-home-inner { flex-direction: column; gap: 1.5rem; align-items: center; text-align: center; }
-  .hero-logo-full { width: 220px; }
-  .hero-text-side { text-align: left; }
+  .hero-home-inner { flex-direction: column !important; gap: 1.5rem; align-items: center !important; }
+  .hero-logo-full { width: 200px; }
+  .hero-text-side { text-align: left; width: 100%; }
 
   .hero-filigrane { font-size: 70px; right: 0; bottom: -0.5rem; }
   .hero h1 { font-size: 26px; margin-bottom: 8px; }
