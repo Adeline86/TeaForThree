@@ -47,8 +47,14 @@ nav {
   height: 62px;
 }
 .nav-logo {
-  text-decoration: none; flex-shrink: 0; display: flex; align-items: center;
+  text-decoration: none; flex-shrink: 0; display: flex; align-items: center; gap: 8px;
 }
+.nav-logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px; font-weight: 400;
+  color: var(--text-dark);
+}
+.nav-logo-text em { font-style: normal; color: var(--gold); }
 .nav-links { display: flex; gap: 0; list-style: none; }
 .nav-links a {
   display: block; padding: 0 14px;
@@ -251,6 +257,11 @@ footer {
 
   /* — hero — */
   .hero { padding: 1.75rem 1rem 1.75rem; min-height: 200px; }
+
+  .hero-home { min-height: auto; padding: 2rem 1rem; }
+  .hero-home-inner { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+  .hero-logo-full { width: 240px; }
+
   .hero-filigrane { font-size: 70px; right: 0; bottom: -0.5rem; }
   .hero h1 { font-size: 26px; margin-bottom: 8px; }
   .hero-tag { font-size: 9px; letter-spacing: 0.14em; margin-bottom: 8px; }

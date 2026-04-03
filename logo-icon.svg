@@ -1,0 +1,51 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Rose des vents filigrane -->
+  <g transform="translate(24,24)" opacity="0.18" fill="#6B3A1F" stroke="#6B3A1F">
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#6B3A1F" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#6B3A1F" stroke-width="0.3"/>
+    <!-- N -->
+    <polygon points="0,-22 -2,-14 0,-18 2,-14" fill="#6B3A1F"/>
+    <!-- S -->
+    <polygon points="0,22 -2,14 0,18 2,14" fill="#6B3A1F"/>
+    <!-- E -->
+    <polygon points="22,0 14,-2 18,0 14,2" fill="#6B3A1F"/>
+    <!-- W -->
+    <polygon points="-22,0 -14,-2 -18,0 -14,2" fill="#6B3A1F"/>
+    <!-- NE NO SE SO -->
+    <polygon points="16,-16 11,-12 13,-13 12,-11" fill="#6B3A1F"/>
+    <polygon points="-16,-16 -11,-12 -13,-13 -12,-11" fill="#6B3A1F"/>
+    <polygon points="16,16 11,12 13,13 12,11" fill="#6B3A1F"/>
+    <polygon points="-16,16 -11,12 -13,13 -12,11" fill="#6B3A1F"/>
+    <!-- axes -->
+    <line x1="0" y1="-16" x2="0" y2="-3" stroke="#6B3A1F" stroke-width="0.4"/>
+    <line x1="0" y1="16" x2="0" y2="3" stroke="#6B3A1F" stroke-width="0.4"/>
+    <line x1="-16" y1="0" x2="-3" y2="0" stroke="#6B3A1F" stroke-width="0.4"/>
+    <line x1="16" y1="0" x2="3" y2="0" stroke="#6B3A1F" stroke-width="0.4"/>
+    <line x1="-11" y1="-11" x2="-2" y2="-2" stroke="#6B3A1F" stroke-width="0.3"/>
+    <line x1="11" y1="-11" x2="2" y2="-2" stroke="#6B3A1F" stroke-width="0.3"/>
+    <line x1="-11" y1="11" x2="-2" y2="2" stroke="#6B3A1F" stroke-width="0.3"/>
+    <line x1="11" y1="11" x2="2" y2="2" stroke="#6B3A1F" stroke-width="0.3"/>
+    <!-- centre -->
+    <polygon points="0,-3 2,0 0,3 -2,0" fill="#6B3A1F"/>
+  </g>
+
+  <!-- Tasse -->
+  <g transform="translate(8, 14)">
+    <!-- soucoupe -->
+    <ellipse cx="16" cy="28" rx="16" ry="3" fill="none" stroke="#B5763A" stroke-width="1"/>
+    <!-- corps tasse -->
+    <path d="M4 14 Q3 28 16 28 Q29 28 28 14 Z" fill="#FAF6F0" stroke="#B5763A" stroke-width="1"/>
+    <!-- bord haut -->
+    <ellipse cx="16" cy="14" rx="12" ry="3" fill="#F0E8DC" stroke="#B5763A" stroke-width="1"/>
+    <!-- thé surface -->
+    <ellipse cx="16" cy="14" rx="9" ry="2" fill="#B5763A" opacity="0.4"/>
+    <!-- anse -->
+    <path d="M28 17 Q36 17 36 22 Q36 27 28 25" fill="none" stroke="#B5763A" stroke-width="1.2"/>
+    <!-- vapeur -->
+    <path d="M11 9 Q10 4 12 0" fill="none" stroke="#B5763A" stroke-width="0.8" opacity="0.5" stroke-linecap="round"/>
+    <path d="M16 8 Q15 3 17 -1" fill="none" stroke="#B5763A" stroke-width="0.8" opacity="0.4" stroke-linecap="round"/>
+    <path d="M21 9 Q20 4 22 0" fill="none" stroke="#B5763A" stroke-width="0.8" opacity="0.3" stroke-linecap="round"/>
+  </g>
+
+</svg>
